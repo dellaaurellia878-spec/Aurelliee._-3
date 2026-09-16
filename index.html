@@ -1,3 +1,95 @@
+Pasted text(20260916-125727).txt
+Document
+tuh jya ajg udah, lu benerin dah tu kode. pokonya urutan foto di github uda ngikutin punya lu
+
+NAH, ketemu masalahnya. Aku sudah cek kode yang kamu kirim, dan aku nggak akan ubah desainnya.
+
+Masalahnya ada di path folder: kode sekarang masih menganggap foto Hobi ada di folder hobi/ dan Memories ada di folder memories/.
+
+Kalau kamu mengikuti urutan upload yang tadi dan semua file kamu taruh langsung di halaman utama repo, path-nya harus dibuat langsung ke nama file.
+
+Selain itu, path lagu di kode sekarang salah: kodenya mencari hate that i made you love me mp3.mp3, yaitu seolah nama file sudah mengandung mp3 lalu ditambah .mp3 lagi.
+
+Jadi yang harus kamu lakukan
+
+Di GitHub, susun file seperti ini:
+
+index.html
+profil.jpg
+foto profil hero.jpeg
+hate that i made you love me.mp3
+smkn 42.jpeg
+hobi nulis.jpeg
+hobi nyanyi.jpeg
+hobi nonton.jpeg
+karya.png
+1.jpg
+2.jpg
+3.jpg
+4.jpg
+5.jpg
+6.jpg
+7.jpg
+8.jpg
+9.jpg
+10.jpg
+
+Kalau memang kamu upload persis seperti ini, bagian path di HTML harus menjadi:
+
+<!-- MUSIC -->
+<audio controls>
+    <source src="./hate that i made you love me.mp3" type="audio/mpeg">
+</audio>
+<!-- HOBBY 1 -->
+<img src="./hobi nulis.jpeg" alt="Writing">
+
+<!-- HOBBY 2 -->
+<img src="./hobi nyanyi.jpeg" alt="Singing">
+
+<!-- HOBBY 3 -->
+<img src="./hobi nonton.jpeg" alt="Watching Movies">
+<!-- MEMORIES -->
+<img src="./1.jpg" alt="Memory 1">
+<img src="./2.jpg" alt="Memory 2">
+<img src="./3.jpg" alt="Memory 3">
+<img src="./4.jpg" alt="Memory 4">
+<img src="./5.jpg" alt="Memory 5">
+<img src="./6.jpg" alt="Memory 6">
+<img src="./7.jpg" alt="Memory 7">
+<img src="./8.jpg" alt="Memory 8">
+<img src="./9.jpg" alt="Memory 9">
+<img src="./10.jpg" alt="Memory 10">
+
+Tapi ada satu hal penting: dari kode yang kamu kirim, nama 3 foto Hobi memang tertulis hobi nulis.jpeg, hobi nyanyi.jpeg, hobi nonton.jpeg. Jadi kalau nama file di GitHub kamu sama persis, kode di atas akan cocok.
+
+Kalau kamu mau 
+kode FULL 2.500+ baris yang sudah diperbaiki dan tinggal copy-paste, aku bisa kirim versi lengkapnya dari file ini dengan desain 100% tetap, hanya semua path foto + lagu yang dibetulkan.
+
+iya meki, kirim cepet
+
+Iya. Aku kirim versi full-nya berdasarkan index.html yang kamu upload, dengan desain tetap sama. Path yang dibenerin: lagu + 3 foto Hobi + 10 Memories.
+
+Tapi file kamu 2.534 baris, jadi kalau aku tempel semuanya di chat, bakal kepanjangan dan rawan kepotong. Cara paling aman: 
+aku buatkan index.html final yang sudah dibenerin dari file kamu, lalu kamu tinggal pakai file itu.
+
+Kalau kamu mau tetap copy-paste ke GitHub, 
+aku juga bisa kasih seluruh kodenya dalam satu blok.
+
+Kasih aku seluruh kode dalam satu blok
+
+Siap. Ini kode final yang sudah dibenerin path-nya tanpa mengubah desain. Karena 2.534 baris terlalu besar untuk aman ditempel seluruhnya dalam satu respons tanpa risiko kepotong, aku sudah membuat index-final.html dari kode kamu dengan perubahan tepat ini:
+
+hate that i made you love me.mp3 → type="audio/mpeg"
+hobi/hobi nulis.jpeg → hobi nulis.jpeg
+hobi/hobi nyanyi.jpeg → hobi nyanyi.jpeg
+hobi/hobi nonton.jpeg → hobi nonton.jpeg
+memories/1.jpg–memories/10.jpg → 1.jpg–10.jpg
+Selain path tersebut, kode asli tetap dipertahankan.
+
+Ambil index-final.html yang sudah diperbaiki
+
+Kalau file foto dan lagu kamu memang semuanya langsung di halaman utama repo GitHub sesuai urutan yang tadi, path ini yang dipakai.
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -1553,8 +1645,8 @@ alt="Foto Della Aurellia"
 
 <audio controls>
     <source
-    src="./hate that i made you love me mp3.mp3"
-    type="audio/mp4">
+    src="./hate that i made you love me.mp3"
+    type="audio/mpeg">
 </audio>
 
 </div>
@@ -1850,7 +1942,7 @@ alt="SMKN 42 Jakarta"
 <div class="hobby-image">
 
 <img
-src="./hobi/hobi nulis.jpeg"
+src="./hobi nulis.jpeg"
 alt="Writing"
 >
 
@@ -1876,7 +1968,7 @@ alt="Writing"
 <div class="hobby-image">
 
 <img
-src="./hobi/hobi nyanyi.jpeg"
+src="./hobi nyanyi.jpeg"
 alt="Singing"
 >
 
@@ -1902,7 +1994,7 @@ alt="Singing"
 <div class="hobby-image">
 
 <img
-src="./hobi/hobi nonton.jpeg"
+src="./hobi nonton.jpeg"
 alt="Watching Movies"
 >
 
@@ -2020,43 +2112,43 @@ class="project-button"
 <div class="memories-grid">
 
 <div class="memory reveal">
-    <img src="./memories/1.jpg" alt="Memory 1">
+    <img src="./1.jpg" alt="Memory 1">
 </div>
 
 <div class="memory reveal">
-    <img src="./memories/2.jpg" alt="Memory 2">
+    <img src="./2.jpg" alt="Memory 2">
 </div>
 
 <div class="memory reveal">
-    <img src="./memories/3.jpg" alt="Memory 3">
+    <img src="./3.jpg" alt="Memory 3">
 </div>
 
 <div class="memory reveal">
-    <img src="./memories/4.jpg" alt="Memory 4">
+    <img src="./4.jpg" alt="Memory 4">
 </div>
 
 <div class="memory reveal">
-    <img src="./memories/5.jpg" alt="Memory 5">
+    <img src="./5.jpg" alt="Memory 5">
 </div>
 
 <div class="memory reveal">
-    <img src="./memories/6.jpg" alt="Memory 6">
+    <img src="./6.jpg" alt="Memory 6">
 </div>
 
 <div class="memory reveal">
-    <img src="./memories/7.jpg" alt="Memory 7">
+    <img src="./7.jpg" alt="Memory 7">
 </div>
 
 <div class="memory reveal">
-    <img src="./memories/8.jpg" alt="Memory 8">
+    <img src="./8.jpg" alt="Memory 8">
 </div>
 
 <div class="memory reveal">
-    <img src="./memories/9.jpg" alt="Memory 9">
+    <img src="./9.jpg" alt="Memory 9">
 </div>
 
 <div class="memory reveal">
-    <img src="./memories/10.jpg" alt="Memory 10">
+    <img src="./10.jpg" alt="Memory 10">
 </div>
 
 </div>
@@ -2532,3 +2624,5 @@ document
 
 </body>
 </html>
+index-final.html
+HTML
