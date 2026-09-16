@@ -1,32 +1,20 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Della Aurellia | Aurel ♡</title>
+<title>Aurel ♡</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-
-:root{
-    --pink:#d98fa9;
-    --pink-dark:#b86f8d;
-    --pink-light:#f9dce7;
-    --pink-soft:#fcebf1;
-    --cream:#fff8ed;
-    --cream2:#fff3e6;
-    --rose:#e8b7c8;
-    --text:#9b667a;
-    --shadow:0 20px 55px rgba(184,111,141,.18);
-}
 
 *{
     margin:0;
@@ -39,61 +27,37 @@ html{
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    color:var(--text);
     background:
-        radial-gradient(circle at 10% 10%,rgba(249,220,231,.9),transparent 28%),
-        radial-gradient(circle at 90% 20%,rgba(255,243,230,.95),transparent 30%),
-        radial-gradient(circle at 50% 90%,rgba(246,210,224,.7),transparent 35%),
-        linear-gradient(135deg,#fff8ef,#fdeaf1);
+        radial-gradient(circle at 10% 10%,rgba(248,220,229,.7),transparent 25%),
+        radial-gradient(circle at 90% 20%,rgba(255,238,218,.8),transparent 28%),
+        radial-gradient(circle at 20% 80%,rgba(247,220,230,.65),transparent 25%),
+        linear-gradient(135deg,#fffaf4,#fff3f0,#fdf7f1);
+
+    color:#9d6d7e;
+    font-family:'Poppins',sans-serif;
     overflow-x:hidden;
 }
 
-/* FLOATING DECORATION */
-
-.flower{
+body::before{
+    content:"";
     position:fixed;
+    inset:0;
     pointer-events:none;
-    z-index:0;
-    opacity:.55;
-    animation:floatFlower 7s ease-in-out infinite;
+    z-index:-1;
+    background:
+        radial-gradient(circle at 70% 70%,rgba(236,185,204,.12),transparent 30%);
 }
 
-.flower:nth-child(1){
-    top:12%;
-    left:3%;
-    font-size:28px;
+a{
+    color:inherit;
 }
 
-.flower:nth-child(2){
-    top:30%;
-    right:4%;
-    font-size:22px;
-    animation-delay:1s;
-}
-
-.flower:nth-child(3){
-    bottom:25%;
-    left:5%;
-    font-size:24px;
-    animation-delay:2s;
-}
-
-.flower:nth-child(4){
-    bottom:10%;
-    right:6%;
-    font-size:30px;
-    animation-delay:3s;
-}
-
-@keyframes floatFlower{
-    0%,100%{
-        transform:translateY(0) rotate(0deg);
-    }
-
-    50%{
-        transform:translateY(-18px) rotate(8deg);
-    }
+section{
+    width:min(1120px,calc(100% - 34px));
+    margin:auto;
+    padding:120px 0;
+    position:relative;
+    z-index:1;
 }
 
 /* NAVBAR */
@@ -103,62 +67,194 @@ body{
     top:18px;
     left:50%;
     transform:translateX(-50%);
-    width:min(1150px,calc(100% - 30px));
+
+    width:min(1160px,calc(100% - 30px));
+
     z-index:1000;
 
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    gap:12px;
 
-    padding:13px 18px;
+    padding:11px 15px;
 
-    background:rgba(255,248,242,.68);
-    backdrop-filter:blur(22px);
-    -webkit-backdrop-filter:blur(22px);
+    background:rgba(255,248,242,.72);
 
-    border:1px solid rgba(255,255,255,.8);
-    border-radius:25px;
+    backdrop-filter:blur(24px);
+    -webkit-backdrop-filter:blur(24px);
 
-    box-shadow:0 15px 45px rgba(184,111,141,.12);
+    border:1px solid rgba(255,255,255,.9);
+    border-radius:28px;
+
+    box-shadow:0 15px 45px rgba(184,111,141,.13);
 }
 
 .logo{
     font-family:'DM Serif Display',serif;
     font-size:25px;
-    color:var(--pink-dark);
+    color:#bf7892;
     text-decoration:none;
+
+    padding:8px 13px;
+    border-radius:20px;
+
+    background:rgba(250,222,232,.38);
+
+    transform:rotate(-2deg);
+
+    transition:.35s;
+}
+
+.logo:hover{
+    transform:rotate(2deg) translateY(-2px);
 }
 
 .logo span{
-    color:#d49aaf;
+    color:#d494ac;
 }
 
 .nav-links{
     display:flex;
-    gap:4px;
+    align-items:center;
+    justify-content:center;
+    gap:3px;
+
     list-style:none;
+    flex:1;
 }
 
 .nav-links a{
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
     color:#a36f82;
     text-decoration:none;
-    font-size:12px;
+
+    font-size:10px;
     font-weight:500;
 
-    padding:9px 12px;
-    border-radius:15px;
+    padding:8px 11px;
 
-    transition:.3s;
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        color .3s ease;
+
+    white-space:nowrap;
+}
+
+/* NAVBAR VARIATION */
+
+.nav-links li:nth-child(1) a{
+    padding:9px 14px;
+    border-radius:20px 13px 18px 15px;
+    transform:rotate(-2deg);
+}
+
+.nav-links li:nth-child(2) a{
+    padding:7px 12px;
+    border-radius:13px 21px 14px 20px;
+    transform:translateY(3px);
+}
+
+.nav-links li:nth-child(3) a{
+    padding:10px 13px;
+    border-radius:22px 12px 19px 14px;
+    transform:rotate(1.5deg);
+}
+
+.nav-links li:nth-child(4) a{
+    padding:7px 15px;
+    border-radius:12px 19px 15px 21px;
+    transform:translateY(-3px);
+}
+
+.nav-links li:nth-child(5) a{
+    padding:9px 12px;
+    border-radius:20px 14px 18px 12px;
+    transform:rotate(-1deg);
+}
+
+.nav-links li:nth-child(6) a{
+    padding:8px 13px;
+    border-radius:14px 22px 15px 20px;
+    transform:translateY(3px);
+}
+
+.nav-links li:nth-child(7) a{
+    padding:10px 15px;
+    border-radius:23px 12px 20px 14px;
+    transform:rotate(2deg);
+}
+
+.nav-links li:nth-child(8) a{
+    padding:7px 14px;
+    border-radius:12px 22px 14px 20px;
+    background:rgba(247,215,226,.34);
+    transform:translateY(-3px) rotate(-1deg);
+}
+
+.nav-links li:nth-child(9) a{
+    padding:9px 14px;
+    border-radius:20px 13px 22px 15px;
+    transform:rotate(1deg);
+}
+
+.nav-links li:nth-child(1) a::after{
+    content:"♡";
+    position:absolute;
+    top:-9px;
+    right:-4px;
+    font-size:9px;
+    color:#d58ba6;
+}
+
+.nav-links li:nth-child(3) a::after{
+    content:"✦";
+    position:absolute;
+    top:-8px;
+    right:-4px;
+    font-size:8px;
+    color:#d58ba6;
+}
+
+.nav-links li:nth-child(6) a::after{
+    content:"♡";
+    position:absolute;
+    bottom:-9px;
+    left:-3px;
+    font-size:8px;
+    color:#d58ba6;
+}
+
+.nav-links li:nth-child(8) a::after{
+    content:"✿";
+    position:absolute;
+    top:-9px;
+    right:-4px;
+    font-size:8px;
+    color:#d58ba6;
 }
 
 .nav-links a:hover{
-    background:rgba(239,190,207,.35);
     color:#b45f7e;
+    background:rgba(239,190,207,.48)!important;
+
+    transform:
+        translateY(-5px)
+        rotate(0deg)
+        scale(1.06)!important;
+
+    box-shadow:0 8px 18px rgba(184,111,141,.12);
 }
 
 .nav-icons{
     display:flex;
     gap:7px;
+    align-items:center;
 }
 
 .nav-icons a{
@@ -170,70 +266,240 @@ body{
     justify-content:center;
 
     border-radius:50%;
+
     text-decoration:none;
 
     color:#b96f89;
-    background:rgba(255,255,255,.6);
+    background:rgba(255,255,255,.65);
 
     transition:.3s;
 }
 
+.nav-icons a:first-child{
+    transform:translateY(3px) rotate(-7deg);
+}
+
+.nav-icons a:last-child{
+    transform:translateY(-3px) rotate(7deg);
+}
+
 .nav-icons a:hover{
-    transform:translateY(-3px) rotate(5deg);
+    transform:translateY(-5px) rotate(0deg) scale(1.1);
     background:#f7dce7;
 }
 
-/* HERO */
+/* FLOATING FLOWERS */
+
+.flower{
+    position:fixed;
+    pointer-events:none;
+    color:#dda0b4;
+    opacity:.28;
+    z-index:0;
+}
+
+.flower:nth-child(1){
+    top:18%;
+    left:4%;
+    font-size:28px;
+    animation:floatOne 7s ease-in-out infinite;
+}
+
+.flower:nth-child(2){
+    top:55%;
+    right:5%;
+    font-size:24px;
+    animation:floatTwo 8s ease-in-out infinite;
+}
+
+.flower:nth-child(3){
+    bottom:18%;
+    left:8%;
+    font-size:19px;
+    animation:floatOne 6s ease-in-out infinite;
+}
+
+.flower:nth-child(4){
+    top:30%;
+    right:9%;
+    font-size:27px;
+    animation:floatTwo 9s ease-in-out infinite;
+}
+
+@keyframes floatOne{
+    0%,100%{
+        transform:translateY(0) rotate(0deg);
+    }
+
+    50%{
+        transform:translateY(-20px) rotate(12deg);
+    }
+}
+
+@keyframes floatTwo{
+    0%,100%{
+        transform:translateY(0) rotate(0deg);
+    }
+
+    50%{
+        transform:translateY(18px) rotate(-12deg);
+    }
+}
+
+/* EXTRA FLOATING EMOJIS */
+
+.floating-emoji{
+    position:fixed;
+    z-index:0;
+    pointer-events:none;
+    opacity:.5;
+    animation:floatEmoji 5s ease-in-out infinite;
+}
+
+.floating-emoji.e1{
+    left:5%;
+    top:24%;
+    font-size:20px;
+}
+
+.floating-emoji.e2{
+    right:6%;
+    top:35%;
+    font-size:17px;
+    animation-delay:1s;
+}
+
+.floating-emoji.e3{
+    left:9%;
+    bottom:22%;
+    font-size:18px;
+    animation-delay:2s;
+}
+
+.floating-emoji.e4{
+    right:10%;
+    bottom:18%;
+    font-size:21px;
+    animation-delay:3s;
+}
+
+.floating-emoji.e5{
+    left:47%;
+    top:15%;
+    font-size:14px;
+    animation-delay:1.5s;
+}
+
+.floating-emoji.e6{
+    right:30%;
+    top:58%;
+    font-size:16px;
+    animation-delay:2.5s;
+}
+
+@keyframes floatEmoji{
+    0%,100%{
+        transform:translateY(0) rotate(-5deg);
+    }
+
+    50%{
+        transform:translateY(-14px) rotate(8deg);
+    }
+}
+
+/* SECTION */
+
+.section-number{
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#c7879e;
+    margin-bottom:15px;
+}
+
+.section-title{
+    font-family:'DM Serif Display',serif;
+    font-size:clamp(42px,6vw,70px);
+    font-weight:400;
+    line-height:1;
+
+    color:#b8738d;
+    margin-bottom:20px;
+}
+
+.section-title em{
+    color:#d397aa;
+}
+
+.description{
+    max-width:650px;
+    font-size:12px;
+    line-height:2;
+    color:#a87989;
+}
+
+/* HOME */
 
 .hero{
     min-height:100vh;
-    width:min(1200px,calc(100% - 34px));
-    margin:auto;
 
     display:grid;
-    grid-template-columns:1.1fr .9fr;
+    grid-template-columns:1fr 1fr;
     align-items:center;
-    gap:70px;
+    gap:80px;
 
-    padding-top:100px;
-    position:relative;
-    z-index:1;
-}
-
-.hero-text{
-    position:relative;
+    padding-top:130px;
 }
 
 .hero-kicker{
-    font-size:11px;
-    letter-spacing:4px;
+    display:inline-block;
+
+    padding:8px 14px;
+
+    background:rgba(248,220,230,.5);
+    border:1px solid rgba(255,255,255,.8);
+
+    border-radius:30px;
+
+    font-size:9px;
+    letter-spacing:2px;
     text-transform:uppercase;
-    color:#c28aa0;
+
+    color:#c47f98;
+
     margin-bottom:20px;
+
+    transform:rotate(-2deg);
 }
 
 .hero-title{
     font-family:'DM Serif Display',serif;
-    font-size:clamp(65px,9vw,120px);
+    font-weight:400;
+
+    font-size:clamp(70px,9vw,115px);
     line-height:.82;
-    color:#bf7893;
+
+    color:#b66f89;
+
     margin-bottom:30px;
 }
 
 .hero-title span{
     display:block;
-    font-family:'Cormorant Garamond',serif;
-    font-weight:500;
-    font-style:italic;
-    color:#d89bb0;
     margin-left:55px;
+
+    font-style:italic;
+    color:#d397aa;
 }
 
 .hero-description{
-    max-width:560px;
-    font-size:14px;
+    max-width:510px;
+
+    font-size:12px;
     line-height:2;
-    color:#9c6c7e;
+
+    color:#9f7181;
+
     margin-bottom:30px;
 }
 
@@ -249,29 +515,30 @@ body{
     gap:10px;
 
     text-decoration:none;
-    padding:13px 20px;
+
+    padding:12px 19px;
+
     border-radius:18px;
 
-    font-size:11px;
-    letter-spacing:.5px;
+    font-size:10px;
 
-    transition:.35s;
-}
-
-.button:hover{
-    transform:translateY(-4px);
+    transition:.3s;
 }
 
 .button-primary{
-    background:#d58ba6;
     color:white;
-    box-shadow:0 12px 30px rgba(190,115,143,.22);
+    background:#d58ba6;
+    box-shadow:0 10px 25px rgba(184,111,141,.18);
 }
 
 .button-soft{
-    background:rgba(255,255,255,.65);
-    border:1px solid rgba(218,170,188,.4);
-    color:#b86f89;
+    color:#b66e88;
+    background:rgba(255,255,255,.58);
+    border:1px solid rgba(231,190,204,.55);
+}
+
+.button:hover{
+    transform:translateY(-5px);
 }
 
 .hero-photo-area{
@@ -280,171 +547,133 @@ body{
 }
 
 .hero-photo-frame{
-    width:390px;
-    height:510px;
     position:relative;
+
+    width:360px;
+    height:475px;
+
+    padding:10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffaf3,
+            #f5d8e3
+        );
+
+    border-radius:45% 55% 48% 52% / 48% 42% 58% 52%;
+
+    box-shadow:
+        0 25px 70px rgba(185,111,141,.15);
+
     transform:rotate(3deg);
 }
 
-.hero-photo-frame::before{
-    content:"";
-    position:absolute;
-    inset:20px -18px -20px 18px;
-
-    border:2px solid #e7b5c6;
-    border-radius:38px;
-
-    transform:rotate(-7deg);
-}
-
-.hero-photo-frame::after{
-    content:"✦";
-    position:absolute;
-    right:-28px;
-    top:20px;
-
-    font-size:34px;
-    color:#d697ad;
-}
-
 .hero-photo{
-    position:relative;
-    z-index:2;
-
     width:100%;
     height:100%;
+
     object-fit:cover;
 
-    border-radius:35px;
-    border:9px solid rgba(255,250,243,.9);
+    border-radius:inherit;
 
-    box-shadow:var(--shadow);
+    transform:rotate(-3deg);
 }
 
 .photo-label{
     position:absolute;
-    z-index:3;
 
-    bottom:-17px;
-    left:-25px;
+    right:-25px;
+    bottom:25px;
 
-    padding:10px 17px;
+    padding:11px 17px;
 
-    background:#fff8ed;
-    color:#b76e88;
+    background:#fffaf3;
 
-    border-radius:16px;
-    box-shadow:0 10px 25px rgba(184,111,141,.13);
+    border:1px solid rgba(255,255,255,.9);
+
+    border-radius:18px;
 
     font-family:'Cormorant Garamond',serif;
-    font-size:19px;
-}
+    font-size:16px;
 
-/* GENERAL */
+    color:#b56d87;
 
-section{
-    width:min(1120px,calc(100% - 34px));
-    margin:auto;
-    padding:110px 0;
-    position:relative;
-    z-index:1;
-}
+    box-shadow:0 10px 30px rgba(184,111,141,.12);
 
-.section-number{
-    font-size:11px;
-    letter-spacing:4px;
-    text-transform:uppercase;
-    color:#c48aa0;
-    margin-bottom:10px;
-}
-
-.section-title{
-    font-family:'DM Serif Display',serif;
-    font-size:clamp(43px,6vw,70px);
-    line-height:.95;
-    color:#c27c96;
-    margin-bottom:22px;
-}
-
-.section-title em{
-    font-family:'Cormorant Garamond',serif;
-    font-weight:600;
-    color:#d497ad;
-}
-
-.description{
-    max-width:650px;
-    font-size:13px;
-    line-height:2;
-    color:#a57485;
+    transform:rotate(-4deg);
 }
 
 /* MUSIC */
 
-#music{
-    padding-top:90px;
-}
-
 .music-card{
-    margin-top:38px;
+    margin-top:40px;
 
-    display:grid;
-    grid-template-columns:75px 1fr;
-    gap:22px;
+    display:flex;
     align-items:center;
+    gap:25px;
 
-    padding:25px;
+    padding:25px 30px;
 
-    background:rgba(255,250,244,.68);
+    background:rgba(255,250,245,.72);
+
     border:1px solid rgba(255,255,255,.9);
 
     border-radius:30px;
-    box-shadow:var(--shadow);
+
+    box-shadow:0 18px 50px rgba(184,111,141,.08);
 }
 
 .music-icon{
-    width:75px;
-    height:75px;
+    width:55px;
+    height:55px;
+
+    flex-shrink:0;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    border-radius:23px;
+    border-radius:20px;
 
-    background:#f5d7e2;
-    color:#bd7690;
+    background:#f4d7e1;
+    color:#c47793;
 
-    font-size:25px;
+    font-size:19px;
+
+    transform:rotate(-5deg);
 }
 
 .music-label{
-    font-size:9px;
-    letter-spacing:3px;
+    font-size:8px;
+    letter-spacing:2px;
     text-transform:uppercase;
-    color:#c28ba0;
+
+    color:#c4879b;
+
     margin-bottom:4px;
 }
 
 .music-title{
     font-family:'Cormorant Garamond',serif;
-    font-size:27px;
-    color:#b86f89;
-    margin-bottom:8px;
+    font-size:22px;
+
+    color:#b66e88;
+
+    margin-bottom:10px;
 }
 
 audio{
-    width:100%;
-    margin-top:8px;
-    height:34px;
+    width:min(500px,100%);
+    height:35px;
 }
 
 /* ABOUT */
 
 .about-layout{
     display:grid;
-    grid-template-columns:.8fr 1.2fr;
-    gap:70px;
+    grid-template-columns:380px 1fr;
+    gap:80px;
     align-items:center;
 }
 
@@ -452,226 +681,233 @@ audio{
     position:relative;
 }
 
+.about-image::before{
+    content:"";
+
+    position:absolute;
+    inset:-14px;
+
+    border:1px dashed #e1b3c3;
+
+    border-radius:45px;
+
+    transform:rotate(-4deg);
+}
+
 .about-image img{
+    position:relative;
+
     width:100%;
-    max-width:390px;
-    height:490px;
+    height:500px;
+
     object-fit:cover;
 
-    border-radius:30px;
-    border:7px solid rgba(255,249,241,.75);
+    border-radius:40px;
 
-    box-shadow:var(--shadow);
-
-    transform:rotate(-3deg);
-}
-
-.about-image::before{
-    content:"♡";
-    position:absolute;
-
-    left:-18px;
-    top:-22px;
-
-    font-size:36px;
-    color:#d694ab;
-    z-index:4;
-}
-
-.about-text .description{
-    white-space:pre-line;
-    margin-bottom:25px;
+    box-shadow:0 20px 60px rgba(184,111,141,.14);
 }
 
 .about-mini-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:10px;
-    margin-top:25px;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+
+    margin-top:30px;
 }
 
 .about-mini{
-    padding:16px 12px;
+    padding:16px;
 
-    background:rgba(255,250,244,.65);
-    border:1px solid rgba(255,255,255,.9);
+    background:rgba(255,255,255,.5);
+
+    border:1px solid rgba(255,255,255,.8);
 
     border-radius:18px;
 }
 
+.about-mini:last-child{
+    grid-column:1/-1;
+}
+
 .about-mini span{
     display:block;
-    font-size:9px;
-    letter-spacing:1px;
+
+    font-size:8px;
+    letter-spacing:2px;
     text-transform:uppercase;
-    color:#c18ba0;
+
+    color:#ca8aa0;
+
     margin-bottom:6px;
 }
 
 .about-mini strong{
-    font-size:11px;
-    font-weight:500;
-    color:#a76b81;
+    font-family:'Cormorant Garamond',serif;
+    font-size:17px;
+    font-weight:600;
+
+    color:#a96d83;
 }
 
-/* CV */
+/* EDUCATION */
 
 .education-card{
-    margin-top:40px;
+    margin-top:45px;
 
     display:grid;
-    grid-template-columns:.9fr 1.1fr;
-    gap:35px;
-    align-items:center;
+    grid-template-columns:420px 1fr;
 
-    padding:22px;
+    overflow:hidden;
 
-    background:rgba(255,250,244,.65);
+    background:rgba(255,250,245,.75);
+
     border:1px solid rgba(255,255,255,.9);
 
-    border-radius:32px;
-    box-shadow:var(--shadow);
+    border-radius:38px;
+
+    box-shadow:0 20px 60px rgba(184,111,141,.09);
 }
 
 .education-image{
-    overflow:hidden;
-    border-radius:25px;
-    height:330px;
+    min-height:360px;
 }
 
 .education-image img{
     width:100%;
     height:100%;
-    object-fit:cover;
-    transition:.5s;
-}
 
-.education-card:hover .education-image img{
-    transform:scale(1.05);
+    object-fit:cover;
 }
 
 .education-content{
-    padding:15px 15px 15px 5px;
+    padding:50px;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
 }
 
 .education-year{
     font-size:9px;
     letter-spacing:3px;
-    color:#c18aa0;
-    margin-bottom:10px;
+
+    color:#c6879c;
+
+    margin-bottom:15px;
 }
 
 .education-content h3{
     font-family:'DM Serif Display',serif;
-    font-size:35px;
+    font-size:40px;
     font-weight:400;
-    color:#bd7892;
-    margin-bottom:14px;
+
+    color:#b76f89;
+
+    margin-bottom:18px;
 }
 
 .education-content p{
-    font-size:13px;
+    font-size:12px;
     line-height:2;
-    color:#a87587;
+
+    color:#a27685;
 }
 
 /* SKILLS */
 
 .skills-grid{
-    margin-top:40px;
-
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:15px;
+    gap:16px;
+
+    margin-top:45px;
 }
 
 .skill-card{
-    padding:27px 20px;
+    padding:28px 22px;
 
-    min-height:230px;
+    min-height:210px;
 
-    background:rgba(255,250,244,.66);
+    background:rgba(255,250,245,.7);
+
     border:1px solid rgba(255,255,255,.9);
 
-    border-radius:25px;
+    border-radius:27px;
+
+    box-shadow:0 15px 45px rgba(184,111,141,.07);
 
     transition:.35s;
 }
 
 .skill-card:nth-child(2){
-    transform:translateY(18px);
+    transform:translateY(15px);
 }
 
 .skill-card:nth-child(4){
-    transform:translateY(12px);
+    transform:translateY(-12px);
 }
 
 .skill-card:hover{
     transform:translateY(-8px) rotate(-1deg);
-    box-shadow:var(--shadow);
-}
-
-.skill-card:nth-child(2):hover{
-    transform:translateY(7px) rotate(1deg);
-}
-
-.skill-card:nth-child(4):hover{
-    transform:translateY(1px) rotate(-1deg);
+    box-shadow:0 20px 55px rgba(184,111,141,.13);
 }
 
 .skill-icon{
-    width:48px;
-    height:48px;
+    width:45px;
+    height:45px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    border-radius:15px;
+    border-radius:16px;
 
-    background:#f5d9e3;
+    background:#f4d9e3;
     color:#bd7690;
 
-    margin-bottom:18px;
+    margin-bottom:25px;
+
+    transform:rotate(-5deg);
 }
 
 .skill-card h3{
     font-family:'Cormorant Garamond',serif;
-    font-size:27px;
+    font-size:24px;
     font-weight:600;
-    color:#b96f89;
-    margin-bottom:8px;
+
+    color:#b16c85;
+
+    margin-bottom:10px;
 }
 
 .skill-card p{
-    font-size:11px;
-    line-height:1.9;
-    color:#a87989;
+    font-size:10px;
+    line-height:1.8;
+
+    color:#a87b8a;
 }
 
 /* HOBBIES */
 
 .hobbies-grid{
-    margin-top:40px;
-
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:25px;
+    gap:22px;
+
+    margin-top:45px;
 }
 
 .hobby-card{
-    position:relative;
-    padding:12px;
+    overflow:hidden;
 
-    background:rgba(255,250,244,.72);
+    background:rgba(255,250,245,.75);
 
     border:1px solid rgba(255,255,255,.9);
 
-    border-radius:28px;
+    border-radius:30px;
 
-    box-shadow:0 15px 40px rgba(184,111,141,.09);
+    box-shadow:0 18px 50px rgba(184,111,141,.08);
 
-    transition:.4s;
+    transition:.35s;
 }
 
 .hobby-card:nth-child(1){
@@ -679,28 +915,27 @@ audio{
 }
 
 .hobby-card:nth-child(2){
-    transform:translateY(25px) rotate(2deg);
+    transform:translateY(18px);
 }
 
 .hobby-card:nth-child(3){
-    transform:rotate(-1deg);
+    transform:rotate(2deg);
 }
 
 .hobby-card:hover{
-    transform:translateY(-10px) rotate(0deg);
-    box-shadow:var(--shadow);
+    transform:translateY(-9px) rotate(0deg);
 }
 
 .hobby-image{
-    height:260px;
+    height:300px;
     overflow:hidden;
-    border-radius:21px;
 }
 
 .hobby-image img{
     width:100%;
     height:100%;
     object-fit:cover;
+
     transition:.5s;
 }
 
@@ -709,82 +944,88 @@ audio{
 }
 
 .hobby-info{
-    padding:15px 7px 9px;
+    padding:20px 22px;
 }
 
 .hobby-info small{
     font-size:8px;
     letter-spacing:2px;
-    color:#c18aa0;
+
+    color:#c5879c;
 }
 
 .hobby-info h3{
     font-family:'Cormorant Garamond',serif;
-    font-size:28px;
-    font-weight:600;
-    color:#b76f89;
+    font-size:26px;
+
+    color:#b36d86;
+
+    margin-top:5px;
 }
 
 /* PROJECT */
 
 .project-card{
-    margin-top:40px;
+    margin-top:45px;
 
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:35px;
-    align-items:center;
 
-    padding:22px;
+    overflow:hidden;
 
-    background:rgba(255,250,244,.7);
+    background:rgba(255,250,245,.76);
+
     border:1px solid rgba(255,255,255,.9);
 
-    border-radius:34px;
-    box-shadow:var(--shadow);
+    border-radius:38px;
+
+    box-shadow:0 20px 60px rgba(184,111,141,.09);
 }
 
 .project-image{
-    height:390px;
-    overflow:hidden;
-    border-radius:27px;
+    min-height:400px;
 }
 
 .project-image img{
     width:100%;
     height:100%;
-    object-fit:cover;
-    transition:.5s;
-}
 
-.project-card:hover .project-image img{
-    transform:scale(1.04);
+    object-fit:cover;
 }
 
 .project-content{
-    padding:15px;
+    padding:50px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
 .project-number{
     font-size:9px;
     letter-spacing:3px;
-    color:#c18aa0;
-    margin-bottom:12px;
+
+    color:#c5859b;
+
+    margin-bottom:15px;
 }
 
 .project-content h3{
     font-family:'DM Serif Display',serif;
-    font-size:42px;
-    line-height:1;
+    font-size:45px;
     font-weight:400;
-    color:#be7892;
-    margin-bottom:18px;
+
+    color:#b66e88;
+
+    margin-bottom:20px;
 }
 
 .project-content p{
-    font-size:13px;
+    font-size:11px;
     line-height:2;
-    color:#a57485;
+
+    color:#a27685;
+
     margin-bottom:25px;
 }
 
@@ -793,13 +1034,16 @@ audio{
     align-items:center;
     gap:10px;
 
-    padding:13px 18px;
+    width:max-content;
 
-    background:#d58ba6;
+    padding:12px 18px;
+
+    text-decoration:none;
+
     color:white;
+    background:#d58ba6;
 
     border-radius:16px;
-    text-decoration:none;
 
     font-size:10px;
 
@@ -808,121 +1052,113 @@ audio{
 
 .project-button:hover{
     transform:translateY(-4px);
-    box-shadow:0 12px 25px rgba(184,111,141,.2);
+    box-shadow:0 10px 25px rgba(184,111,141,.18);
 }
 
 /* MEMORIES */
 
 .memories-grid{
-    margin-top:45px;
-
     display:grid;
     grid-template-columns:repeat(5,1fr);
-    gap:17px;
-    align-items:start;
+    gap:14px;
+
+    margin-top:45px;
 }
 
 .memory{
-    position:relative;
+    height:190px;
+
+    overflow:hidden;
+
+    border-radius:23px;
+
+    background:#f7e3e9;
+
+    border:5px solid rgba(255,255,255,.75);
+
+    box-shadow:0 12px 35px rgba(184,111,141,.08);
+
     cursor:pointer;
 
-    padding:7px;
-
-    background:#fffaf3;
-
-    border-radius:17px;
-
-    box-shadow:0 12px 30px rgba(184,111,141,.11);
-
-    transition:.4s;
+    transition:.35s;
 }
 
-.memory:nth-child(1){
-    transform:rotate(-3deg);
-}
-
-.memory:nth-child(2){
-    transform:translateY(15px) rotate(2deg);
-}
-
-.memory:nth-child(3){
-    transform:rotate(-1deg);
-}
-
-.memory:nth-child(4){
-    transform:translateY(20px) rotate(3deg);
-}
-
-.memory:nth-child(5){
-    transform:rotate(-2deg);
-}
-
-.memory:nth-child(6){
-    transform:translateY(17px) rotate(2deg);
-}
-
+.memory:nth-child(2),
 .memory:nth-child(7){
-    transform:rotate(-2deg);
+    transform:translateY(15px) rotate(1.5deg);
 }
 
-.memory:nth-child(8){
-    transform:translateY(18px) rotate(3deg);
-}
-
+.memory:nth-child(4),
 .memory:nth-child(9){
-    transform:rotate(-2deg);
-}
-
-.memory:nth-child(10){
-    transform:translateY(12px) rotate(2deg);
+    transform:translateY(-12px) rotate(-2deg);
 }
 
 .memory:hover{
-    transform:translateY(-9px) rotate(0deg) scale(1.03);
-    z-index:5;
-    box-shadow:var(--shadow);
+    transform:translateY(-8px) rotate(0deg) scale(1.03);
 }
 
 .memory img{
-    display:block;
-
     width:100%;
-    aspect-ratio:1/1.15;
+    height:100%;
 
     object-fit:cover;
 
-    border-radius:12px;
+    transition:.5s;
+}
+
+.memory:hover img{
+    transform:scale(1.08);
 }
 
 /* CONTACT */
 
 .contact-box{
-    padding:55px 35px;
     text-align:center;
 
-    background:rgba(255,250,244,.68);
-    border:1px solid rgba(255,255,255,.9);
+    padding:70px 40px;
 
-    border-radius:35px;
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(249,220,231,.7),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(255,243,230,.9),
+            transparent 30%
+        ),
+        rgba(255,250,244,.78);
 
-    box-shadow:var(--shadow);
+    border:1px solid rgba(255,255,255,.95);
+
+    border-radius:40px;
+
+    box-shadow:0 20px 60px rgba(184,111,141,.1);
 }
 
 .contact-box .section-number{
-    text-align:center;
+    margin-bottom:15px;
 }
 
 .contact-box h3{
     font-family:'DM Serif Display',serif;
-    font-size:48px;
+    font-size:55px;
     font-weight:400;
-    color:#be7892;
-    margin-bottom:12px;
+
+    color:#bd7892;
+
+    margin-bottom:20px;
+}
+
+.contact-box h3 em{
+    color:#d397aa;
 }
 
 .contact-box p{
-    max-width:600px;
-    margin:0 auto;
+    max-width:650px;
+
+    margin:0 auto 30px;
 
     font-size:12px;
     line-height:2;
@@ -933,70 +1169,75 @@ audio{
 .social-list{
     display:flex;
     justify-content:center;
-    gap:14px;
-    margin-top:27px;
+    gap:12px;
 }
 
 .social{
-    width:53px;
-    height:53px;
+    width:45px;
+    height:45px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    border-radius:18px;
+    border-radius:50%;
+
+    background:#f5dbe4;
+    color:#b96f89;
 
     text-decoration:none;
 
-    background:#f7dce6;
-    color:#b86f89;
-
-    font-size:21px;
-
-    transition:.35s;
+    transition:.3s;
 }
 
 .social:hover{
-    transform:translateY(-6px) rotate(-5deg);
-    background:#efc6d5;
+    transform:translateY(-6px) rotate(-7deg);
+    background:#edc3d3;
 }
 
 /* TESTIMONIALS */
 
 .testimonials{
-    margin-top:40px;
-
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:18px;
+
+    margin-top:45px;
 }
 
 .testimonial{
     position:relative;
+    overflow:visible;
 
-    padding:28px 24px;
+    padding:30px 25px;
 
-    min-height:225px;
+    min-height:220px;
 
-    background:rgba(255,250,244,.68);
+    background:rgba(255,250,245,.72);
+
     border:1px solid rgba(255,255,255,.9);
 
-    border-radius:25px;
+    border-radius:28px;
 
-    box-shadow:0 12px 35px rgba(184,111,141,.08);
+    box-shadow:0 15px 45px rgba(184,111,141,.07);
 
     transition:.35s;
 }
 
-.testimonial:nth-child(2),
-.testimonial:nth-child(5){
-    transform:translateY(17px);
+.testimonial:nth-child(2){
+    transform:translateY(15px);
 }
 
-.testimonial:nth-child(3),
+.testimonial:nth-child(3){
+    transform:translateY(-10px);
+}
+
+.testimonial:nth-child(5){
+    transform:translateY(15px);
+}
+
 .testimonial:nth-child(6){
-    transform:translateY(-5px);
+    transform:translateY(-8px);
 }
 
 .testimonial:nth-child(7){
@@ -1005,21 +1246,25 @@ audio{
 
 .testimonial:hover{
     transform:translateY(-8px) rotate(-1deg);
-    box-shadow:var(--shadow);
+    box-shadow:0 20px 60px rgba(184,111,141,.13);
 }
 
 .quote{
     font-family:'DM Serif Display',serif;
     font-size:55px;
     line-height:.5;
+
     color:#e2b0c2;
+
     margin-bottom:20px;
 }
 
 .testimonial p{
     font-size:11px;
     line-height:1.9;
+
     color:#9f7181;
+
     margin-bottom:20px;
 }
 
@@ -1027,7 +1272,88 @@ audio{
     font-family:'Cormorant Garamond',serif;
     font-size:19px;
     font-weight:600;
+
     color:#b66e88;
+}
+
+/* TESTIMONIAL EMOJIS */
+
+.testimonial::after{
+    position:absolute;
+
+    right:14px;
+    bottom:12px;
+
+    font-size:15px;
+    letter-spacing:3px;
+
+    opacity:.8;
+}
+
+.testimonial:nth-child(1)::after{
+    content:'💗 🌷 🎀 ✨ 💌 🫧';
+}
+
+.testimonial:nth-child(2)::after{
+    content:'🩷 🌸 🦋 ✨ 🎀 💫';
+}
+
+.testimonial:nth-child(3)::after{
+    content:'💕 🌷 🫧 🎀 ✨ 🌺';
+}
+
+.testimonial:nth-child(4)::after{
+    content:'🌸 💗 🦢 ✨ 🎀 🩷';
+}
+
+.testimonial:nth-child(5)::after{
+    content:'🎀 💕 🌷 🦋 💫 ✨';
+}
+
+.testimonial:nth-child(6)::after{
+    content:'🩷 🌺 💌 ✨ 🫧 🎀';
+}
+
+.testimonial:nth-child(7)::after{
+    content:'💗 🌸 🎀 🦋 ✨ 🌷';
+}
+
+/* FALLING EMOJIS */
+
+.falling-emoji{
+    position:fixed;
+
+    top:-30px;
+
+    z-index:9997;
+
+    pointer-events:none;
+
+    animation:fallEmoji linear forwards;
+}
+
+@keyframes fallEmoji{
+
+    0%{
+        transform:
+            translateY(-30px)
+            rotate(0);
+
+        opacity:0;
+    }
+
+    10%{
+        opacity:.8;
+    }
+
+    100%{
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+
+        opacity:0;
+    }
+
 }
 
 /* FINAL */
@@ -1055,22 +1381,38 @@ audio{
     text-align:center;
 
     background:
-        radial-gradient(circle at 20% 20%,rgba(249,220,231,.7),transparent 30%),
-        radial-gradient(circle at 80% 80%,rgba(255,243,230,.9),transparent 30%),
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(249,220,231,.7),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(255,243,230,.9),
+            transparent 30%
+        ),
         rgba(255,250,244,.78);
 
     border:1px solid rgba(255,255,255,.95);
     border-radius:40px;
 
-    box-shadow:var(--shadow);
+    box-shadow:0 20px 60px rgba(184,111,141,.1);
 }
 
 .final-card h2{
     font-family:'DM Serif Display',serif;
+
     font-size:clamp(43px,6vw,65px);
+
     font-weight:400;
+
     color:#bd7892;
+
     margin-bottom:20px;
+}
+
+.final-card h2 em{
+    color:#d397aa;
 }
 
 .final-card p{
@@ -1112,6 +1454,7 @@ audio{
 
 .burst{
     position:fixed;
+
     z-index:9999;
 
     pointer-events:none;
@@ -1150,7 +1493,9 @@ audio{
 
 .reveal{
     opacity:0;
+
     transform:translateY(25px);
+
     transition:
         opacity .8s ease,
         transform .8s ease;
@@ -1193,6 +1538,12 @@ footer span{
     .nav-links a{
         padding:8px 8px;
         font-size:10px;
+    }
+
+    .nav-links a{
+        font-size:9px!important;
+        padding-left:7px!important;
+        padding-right:7px!important;
     }
 
     .hero{
@@ -1383,6 +1734,855 @@ footer span{
 <div class="flower">✦</div>
 <div class="flower">🌷</div>
 
+<!-- EXTRA FLOATING EMOJIS -->
+
+<div class="floating-emoji e1">💗</div>
+<div class="floating-emoji e2">🎀</div>
+<div class="floating-emoji e3">🌷</div>
+<div class="floating-emoji e4">✨</div>
+<div class="floating-emoji e5">♡</div>
+<div class="floating-emoji e6">💌</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<a href="#home" class="logo">
+    Aurel<span>♡</span>
+</a>
+
+<ul class="nav-links">
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#music">Music</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#cv">CV</a>
+</li>
+
+<li>
+<a href="#skills">Skills</a>
+</li>
+
+<li>
+<a href="#hobbies">Hobbies</a>
+</li>
+
+<li>
+<a href="#projects">Karya</a>
+</li>
+
+<li>
+<a href="#memories">Memories</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
+
+</ul>
+
+<div class="nav-icons">
+
+<a href="#testimonials" title="Testimonials">
+    <i class="fa-regular fa-comment"></i>
+</a>
+
+<a href="#final" title="Message">
+    <i class="fa-regular fa-heart"></i>
+</a>
+
+</div>
+
+</nav>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+<div class="hero-text reveal">
+
+<div class="hero-kicker">
+    Personal Student Portfolio
+</div>
+
+<h1 class="hero-title">
+    Della
+    <span>Aurellia.</span>
+</h1>
+
+<p class="hero-description">
+    Hai, aku Aurel ♡
+    <br>
+    Seorang siswa yang aktif, kreatif,
+    dan pantang menyerah dalam menghadapi
+    berbagai masalah dan mencoba hal baru.
+</p>
+
+<div class="hero-buttons">
+
+<a
+href="#about"
+class="button button-primary"
+>
+    Kenal aku
+    <i class="fa-solid fa-arrow-down"></i>
+</a>
+
+<a
+href="#projects"
+class="button button-soft"
+>
+    Lihat karya
+    <i class="fa-solid fa-arrow-right"></i>
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-photo-area reveal">
+
+<div class="hero-photo-frame">
+
+<img
+class="hero-photo"
+src="./profil.jpg"
+alt="Foto Della Aurellia"
+>
+
+<div class="photo-label">
+    hi, i'm Aurel ♡
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MUSIC -->
+
+<section id="music">
+
+<div class="reveal">
+
+<div class="section-number">
+    01 — Music
+</div>
+
+<h2 class="section-title">
+    Currently <em>listening.</em>
+</h2>
+
+<p class="description">
+    Salah satu lagu yang menemani
+    perjalanan kecilku.
+</p>
+
+</div>
+
+<div class="music-card reveal">
+
+<div class="music-icon">
+    <i class="fa-solid fa-music"></i>
+</div>
+
+<div class="music-info">
+
+<div class="music-label">
+    now playing
+</div>
+
+<div class="music-title">
+    🎧 ⋆｡°✩
+</div>
+
+<audio controls>
+    <source
+    src="./hate that i made you love me mp3.mp3"
+    type="audio/mpeg">
+</audio>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="about-layout">
+
+<div class="about-image reveal">
+
+<img
+src="./foto profil hero.jpeg"
+alt="Foto Aurel"
+>
+
+</div>
+
+<div class="about-text reveal">
+
+<div class="section-number">
+    02 — About Me
+</div>
+
+<h2 class="section-title">
+    A little <em>about me.</em>
+</h2>
+
+<p class="description">
+
+Haiii! Aku Aurel ♡
+
+Aku adalah seorang pelajar dari
+SMKN 42 Jakarta yang
+sedang menikmati proses belajar,
+mencoba hal-hal baru, dan memahami
+diri sendiri.
+
+Aku suka menulis, bernyanyi, dan
+menonton film. Aku juga senang
+membuat sesuatu yang bisa menjadi
+bagian dari proses belajarku.
+
+</p>
+
+<div class="about-mini-grid">
+
+<div class="about-mini">
+
+<span>
+    Full Name
+</span>
+
+<strong>
+    Della Aurellia
+</strong>
+
+</div>
+
+<div class="about-mini">
+
+<span>
+    Nickname
+</span>
+
+<strong>
+    Aurel
+</strong>
+
+</div>
+
+<div class="about-mini">
+
+<span>
+    Likes
+</span>
+
+<strong>
+    Menghabiskan waktu untuk hal yang bermanfaat
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CV -->
+
+<section id="cv">
+
+<div class="reveal">
+
+<div class="section-number">
+    03 — CV
+</div>
+
+<h2 class="section-title">
+    My <em>school.</em>
+</h2>
+
+<p class="description">
+    Tempat aku belajar, berkembang,
+    dan menjalani banyak cerita baru.
+</p>
+
+</div>
+
+<div class="education-card reveal">
+
+<div class="education-image">
+
+<img
+src="./smkn 42.jpeg"
+alt="SMKN 42 Jakarta"
+>
+
+</div>
+
+<div class="education-content">
+
+<div class="education-year">
+    CURRENT EDUCATION
+</div>
+
+<h3>
+    SMKN 42 Jakarta
+</h3>
+
+<p>
+    Di sinilah aku menjalani perjalanan
+    sebagai seorang pelajar. Selain belajar
+    pelajaran sekolah, aku juga sedang
+    belajar memahami diri sendiri,
+    mencoba hal baru, dan mengembangkan
+    kemampuan yang aku punya.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<div class="reveal">
+
+<div class="section-number">
+    04 — Skills
+</div>
+
+<h2 class="section-title">
+    Things I'm <em>learning.</em>
+</h2>
+
+<p class="description">
+    Beberapa kemampuan yang sedang
+    aku pelajari dan kembangkan.
+</p>
+
+</div>
+
+<div class="skills-grid">
+
+<div class="skill-card reveal">
+
+<div class="skill-icon">
+    <i class="fa-solid fa-pen"></i>
+</div>
+
+<h3>
+    Writing
+</h3>
+
+<p>
+    Menulis cerita, ide, dan berbagai
+    hal yang ingin aku tuangkan
+    menjadi kata-kata.
+</p>
+
+</div>
+
+<div class="skill-card reveal">
+
+<div class="skill-icon">
+    <i class="fa-solid fa-laptop-code"></i>
+</div>
+
+<h3>
+    Web Design
+</h3>
+
+<p>
+    Belajar membuat tampilan website
+    yang menarik, rapi, dan nyaman
+    untuk dilihat.
+</p>
+
+</div>
+
+<div class="skill-card reveal">
+
+<div class="skill-icon">
+    <i class="fa-solid fa-lightbulb"></i>
+</div>
+
+<h3>
+    Creativity
+</h3>
+
+<p>
+    Mencoba menuangkan ide menjadi
+    sesuatu yang memiliki karakter
+    dan terasa personal.
+</p>
+
+</div>
+
+<div class="skill-card reveal">
+
+<div class="skill-icon">
+    <i class="fa-solid fa-book-open"></i>
+</div>
+
+<h3>
+    Learning
+</h3>
+
+<p>
+    Terus belajar dari pengalaman,
+    kesalahan, dan hal-hal baru
+    yang aku temui.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- HOBBIES -->
+
+<section id="hobbies">
+
+<div class="reveal">
+
+<div class="section-number">
+    04.5 — Hobbies & Favorites
+</div>
+
+<h2 class="section-title">
+    Things I <em>love.</em>
+</h2>
+
+<p class="description">
+    Beberapa hal sederhana yang aku
+    suka lakukan di waktu luang.
+</p>
+
+</div>
+
+<div class="hobbies-grid">
+
+<div class="hobby-card reveal">
+
+<div class="hobby-image">
+
+<img
+src="./hobi nulis.jpeg"
+alt="Writing"
+>
+
+</div>
+
+<div class="hobby-info">
+
+<small>
+    HOBBY 01
+</small>
+
+<h3>
+    Writing ✍🏻
+</h3>
+
+</div>
+
+</div>
+
+<div class="hobby-card reveal">
+
+<div class="hobby-image">
+
+<img
+src="./hobi nyanyi.jpeg"
+alt="Singing"
+>
+
+</div>
+
+<div class="hobby-info">
+
+<small>
+    HOBBY 02
+</small>
+
+<h3>
+    Singing 🎤
+</h3>
+
+</div>
+
+</div>
+
+<div class="hobby-card reveal">
+
+<div class="hobby-image">
+
+<img
+src="./hobi nonton.jpeg"
+alt="Watching Movies"
+>
+
+</div>
+
+<div class="hobby-info">
+
+<small>
+    HOBBY 03
+</small>
+
+<h3>
+    Watching Movies 🎬
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECT -->
+
+<section id="projects">
+
+<div class="reveal">
+
+<div class="section-number">
+    05 — Projects / Hasil Karya
+</div>
+
+<h2 class="section-title">
+    My first <em>website.</em>
+</h2>
+
+<p class="description">
+    Salah satu hasil percobaan saya dalam
+    belajar membuat website.
+</p>
+
+</div>
+
+<div class="project-card reveal">
+
+<div class="project-image">
+
+<img
+src="./karya.png"
+alt="Website Aurelliee"
+>
+
+</div>
+
+<div class="project-content">
+
+<div class="project-number">
+    PROJECT 01
+</div>
+
+<h3>
+    Website Aurelliee +
+</h3>
+
+<p>
+    Website ini adalah keberhasilan dari
+    percobaan pertama saya dalam membuat
+    sebuah website. Project ini menjadi
+    salah satu pengalaman awal saya untuk
+    belajar membuat tampilan website.
+</p>
+
+<a
+href="https://dellaaurellia878-spec.github.io/Aurelliee05"
+target="_blank"
+rel="noopener noreferrer"
+class="project-button"
+>
+    Buka website
+    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MEMORIES -->
+
+<section id="memories">
+
+<div class="reveal">
+
+<div class="section-number">
+    06 — Memories
+</div>
+
+<h2 class="section-title">
+    Little <em>moments.</em>
+</h2>
+
+<p class="description">
+    Potongan kecil dari berbagai momen
+    yang ingin aku simpan sebagai kenangan.
+</p>
+
+</div>
+
+<div class="memories-grid">
+
+<div class="memory reveal">
+<img src="./1.jpg" alt="Memory 1">
+</div>
+
+<div class="memory reveal">
+<img src="./2.jpg" alt="Memory 2">
+</div>
+
+<div class="memory reveal">
+<img src="./3.jpg" alt="Memory 3">
+</div>
+
+<div class="memory reveal">
+<img src="./4.jpg" alt="Memory 4">
+</div>
+
+<div class="memory reveal">
+<img src="./5.jpg" alt="Memory 5">
+</div>
+
+<div class="memory reveal">
+<img src="./6.jpg" alt="Memory 6">
+</div>
+
+<div class="memory reveal">
+<img src="./7.jpg" alt="Memory 7">
+</div>
+
+<div class="memory reveal">
+<img src="./8.jpg" alt="Memory 8">
+</div>
+
+<div class="memory reveal">
+<img src="./9.jpg" alt="Memory 9">
+</div>
+
+<div class="memory reveal">
+<img src="./10.jpg" alt="Memory 10">
+</div>
+
+</div>
+    }
+
+    .contact-box h3{
+        font-size:40px;
+    }
+
+    .final-card{
+        padding:55px 23px;
+    }
+
+}
+
+
+/* NAVBAR VARIATION */
+.nav-links{gap:3px!important;align-items:center}
+.nav-links li:nth-child(1) a{padding:9px 14px;border-radius:20px 13px 18px 15px;transform:rotate(-2deg)}
+.nav-links li:nth-child(2) a{padding:7px 12px;border-radius:13px 21px 14px 20px;transform:translateY(3px)}
+.nav-links li:nth-child(3) a{padding:10px 13px;border-radius:22px 12px 19px 14px;transform:rotate(1.5deg)}
+.nav-links li:nth-child(4) a{padding:7px 15px;border-radius:12px 19px 15px 21px;transform:translateY(-3px)}
+.nav-links li:nth-child(5) a{padding:9px 12px;border-radius:20px 14px 18px 12px;transform:rotate(-1deg)}
+.nav-links li:nth-child(6) a{padding:8px 13px;border-radius:14px 22px 15px 20px;transform:translateY(3px)}
+.nav-links li:nth-child(7) a{padding:10px 15px;border-radius:23px 12px 20px 14px;transform:rotate(2deg)}
+.nav-links li:nth-child(8) a{padding:7px 14px;border-radius:12px 22px 14px 20px;background:rgba(247,215,226,.34);transform:translateY(-3px) rotate(-1deg)}
+.nav-links li:nth-child(9) a{padding:9px 14px;border-radius:20px 13px 22px 15px;transform:rotate(1deg)}
+.nav-links li:nth-child(1) a::after{content:'♡';position:absolute;top:-9px;right:-4px;font-size:9px;color:#d58ba6}
+.nav-links li:nth-child(3) a::after{content:'✦';position:absolute;top:-8px;right:-4px;font-size:8px;color:#d58ba6}
+.nav-links li:nth-child(6) a::after{content:'♡';position:absolute;bottom:-9px;left:-3px;font-size:8px;color:#d58ba6}
+.nav-links li:nth-child(8) a::after{content:'✿';position:absolute;top:-9px;right:-4px;font-size:8px;color:#d58ba6}
+.nav-links a:hover{transform:translateY(-5px) rotate(0deg) scale(1.06)!important;background:rgba(239,190,207,.48)!important}
+
+
+/* TESTIMONIAL EMOJIS */
+
+.testimonial{
+    position:relative;
+    overflow:visible
+}
+
+.testimonial::after{
+    position:absolute;
+    right:14px;
+    bottom:12px;
+    font-size:15px;
+    letter-spacing:3px;
+    opacity:.8
+}
+
+.testimonial:nth-child(1)::after{
+    content:'💗 🌷 🎀 ✨ 💌 🫧'
+}
+
+.testimonial:nth-child(2)::after{
+    content:'🩷 🌸 🦋 ✨ 🎀 💫'
+}
+
+.testimonial:nth-child(3)::after{
+    content:'💕 🌷 🫧 🎀 ✨ 🌺'
+}
+
+.testimonial:nth-child(4)::after{
+    content:'🌸 💗 🦢 ✨ 🎀 🩷'
+}
+
+.testimonial:nth-child(5)::after{
+    content:'🎀 💕 🌷 🦋 💫 ✨'
+}
+
+.testimonial:nth-child(6)::after{
+    content:'🩷 🌺 💌 ✨ 🫧 🎀'
+}
+
+.testimonial:nth-child(7)::after{
+    content:'💗 🌸 🎀 🦋 ✨ 🌷'
+}
+
+
+/* FLOATING / FALLING EMOJIS */
+
+.floating-emoji{
+    position:fixed;
+    z-index:0;
+    pointer-events:none;
+    opacity:.5;
+    animation:floatEmoji 5s ease-in-out infinite
+}
+
+.floating-emoji.e1{
+    left:5%;
+    top:24%;
+    font-size:20px
+}
+
+.floating-emoji.e2{
+    right:6%;
+    top:35%;
+    font-size:17px;
+    animation-delay:1s
+}
+
+.floating-emoji.e3{
+    left:9%;
+    bottom:22%;
+    font-size:18px;
+    animation-delay:2s
+}
+
+.floating-emoji.e4{
+    right:10%;
+    bottom:18%;
+    font-size:21px;
+    animation-delay:3s
+}
+
+.floating-emoji.e5{
+    left:47%;
+    top:15%;
+    font-size:14px;
+    animation-delay:1.5s
+}
+
+.floating-emoji.e6{
+    right:30%;
+    top:58%;
+    font-size:16px;
+    animation-delay:2.5s
+}
+
+@keyframes floatEmoji{
+    0%,100%{
+        transform:translateY(0) rotate(-5deg)
+    }
+
+    50%{
+        transform:translateY(-14px) rotate(8deg)
+    }
+}
+
+.falling-emoji{
+    position:fixed;
+    top:-30px;
+    z-index:9997;
+    pointer-events:none;
+    animation:fallEmoji linear forwards
+}
+
+@keyframes fallEmoji{
+    0%{
+        transform:translateY(-30px) rotate(0);
+        opacity:0
+    }
+
+    10%{
+        opacity:.8
+    }
+
+    100%{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0
+    }
+}
+
+@media(max-width:1000px){
+    .nav-links a{
+        font-size:9px!important;
+        padding-left:7px!important;
+        padding-right:7px!important
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING FLOWERS -->
+
+<div class="flower">✿</div>
+<div class="flower">♡</div>
+<div class="flower">✦</div>
+<div class="flower">🌷</div>
+
+<div class="floating-emoji e1">💗</div>
+<div class="floating-emoji e2">🎀</div>
+<div class="floating-emoji e3">🌷</div>
+<div class="floating-emoji e4">✨</div>
+<div class="floating-emoji e5">♡</div>
+<div class="floating-emoji e6">💌</div>
+
 
 <!-- NAVBAR -->
 
@@ -1553,7 +2753,7 @@ alt="Foto Della Aurellia"
 
 <audio controls>
     <source
-    src="./hate that i made you love me.mp3"
+    src="./hate that i made you love me mp3.mp3"
     type="audio/mpeg">
 </audio>
 
@@ -1922,29 +3122,28 @@ alt="Watching Movies"
 
 </div>
 
-
 </div>
 
 </section>
 
 
-<!-- PROJECT -->
+<!-- PROJECTS -->
 
 <section id="projects">
 
 <div class="reveal">
 
 <div class="section-number">
-    05 — Projects / Hasil Karya
+    05 — Hasil Karya
 </div>
 
 <h2 class="section-title">
-    My first <em>website.</em>
+    Things I've <em>made.</em>
 </h2>
 
 <p class="description">
-    Salah satu hasil percobaan saya dalam
-    belajar membuat website.
+    Salah satu karya yang pernah
+    aku buat selama proses belajar.
 </p>
 
 </div>
@@ -1956,7 +3155,7 @@ alt="Watching Movies"
 
 <img
 src="./karya.png"
-alt="Website Aurelliee"
+alt="Aurelliee Website"
 >
 
 </div>
@@ -1969,24 +3168,24 @@ alt="Website Aurelliee"
 </div>
 
 <h3>
-    Website Aurelliee +
+    Aurelliee
 </h3>
 
 <p>
-    Website ini adalah keberhasilan dari
-    percobaan pertama saya dalam membuat
-    sebuah website. Project ini menjadi
-    salah satu pengalaman awal saya untuk
-    belajar membuat tampilan website.
+    Website personal yang menjadi
+    salah satu project sebelumnya.
+    Project ini menjadi bagian dari
+    proses belajarku dalam membuat
+    website dan mengembangkan desain.
 </p>
 
 <a
 href="https://dellaaurellia878-spec.github.io/Aurelliee05"
 target="_blank"
 rel="noopener noreferrer"
-class="project-button"
+class="button button-primary"
 >
-    Buka website
+    Visit Website
     <i class="fa-solid fa-arrow-up-right-from-square"></i>
 </a>
 
@@ -2008,17 +3207,19 @@ class="project-button"
 </div>
 
 <h2 class="section-title">
-    Little <em>moments.</em>
+    Little <em>memories.</em>
 </h2>
 
 <p class="description">
-    Potongan kecil dari berbagai momen
-    yang ingin aku simpan sebagai kenangan.
+    Beberapa momen kecil yang ingin
+    aku simpan dan ingat.
 </p>
 
 </div>
 
-<div class="memories-grid">
+
+<div class="memory-grid">
+
 
 <div class="memory reveal">
 <img src="./1.jpg" alt="Memory 1">
@@ -2061,6 +3262,8 @@ class="project-button"
 </div>
 
 </div>
+
+
 <!-- CONTACT -->
 
 <section id="contact">
@@ -2141,11 +3344,11 @@ title="Email"
 <div class="reveal">
 
 <div class="section-number">
-    08 — Testimonials
+    08 — Testimonials 💌
 </div>
 
 <h2 class="section-title">
-    What they <em>say.</em>
+    What they <em>say.</em> 💕
 </h2>
 
 <p class="description">
@@ -2676,8 +3879,69 @@ document.querySelectorAll('img')
 
 });
 
+
+/* =========================
+   FALLING EMOJIS
+========================= */
+
+const fallingSet=[
+    '💗',
+    '💕',
+    '🎀',
+    '✨',
+    '🌷',
+    '♡',
+    '✦',
+    '💌',
+    '🩷',
+    '🌸'
+];
+
+function makeFallingEmoji(){
+
+    const e =
+    document.createElement('span');
+
+    e.className='falling-emoji';
+
+    e.textContent =
+    fallingSet[
+        Math.floor(
+            Math.random()*fallingSet.length
+        )
+    ];
+
+    e.style.left =
+    Math.random()*100+'vw';
+
+    e.style.fontSize =
+    (12+Math.random()*12)+'px';
+
+    e.style.animationDuration =
+    (5+Math.random()*5)+'s';
+
+    document.body.appendChild(e);
+
+    setTimeout(()=>{
+        e.remove();
+    },10000);
+}
+
+for(let i=0;i<16;i++){
+    setTimeout(
+        makeFallingEmoji,
+        i*180
+    );
+}
+
+setInterval(
+    makeFallingEmoji,
+    650
+);
+
 </script>
 
 </body>
 </html>
+</section>
 </section>
