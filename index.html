@@ -183,6 +183,163 @@ body{
     background:#f7dce7;
 }
 
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    width:min(1200px,calc(100% - 34px));
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    align-items:center;
+    gap:70px;
+
+    padding-top:100px;
+    position:relative;
+    z-index:1;
+}
+
+.hero-text{
+    position:relative;
+}
+
+.hero-kicker{
+    font-size:11px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:#c28aa0;
+    margin-bottom:20px;
+}
+
+.hero-title{
+    font-family:'DM Serif Display',serif;
+    font-size:clamp(65px,9vw,120px);
+    line-height:.82;
+    color:#bf7893;
+    margin-bottom:30px;
+}
+
+.hero-title span{
+    display:block;
+    font-family:'Cormorant Garamond',serif;
+    font-weight:500;
+    font-style:italic;
+    color:#d89bb0;
+    margin-left:55px;
+}
+
+.hero-description{
+    max-width:560px;
+    font-size:14px;
+    line-height:2;
+    color:#9c6c7e;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.button{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    text-decoration:none;
+    padding:13px 20px;
+    border-radius:18px;
+
+    font-size:11px;
+    letter-spacing:.5px;
+
+    transition:.35s;
+}
+
+.button:hover{
+    transform:translateY(-4px);
+}
+
+.button-primary{
+    background:#d58ba6;
+    color:white;
+    box-shadow:0 12px 30px rgba(190,115,143,.22);
+}
+
+.button-soft{
+    background:rgba(255,255,255,.65);
+    border:1px solid rgba(218,170,188,.4);
+    color:#b86f89;
+}
+
+.hero-photo-area{
+    display:flex;
+    justify-content:center;
+}
+
+.hero-photo-frame{
+    width:390px;
+    height:510px;
+    position:relative;
+    transform:rotate(3deg);
+}
+
+.hero-photo-frame::before{
+    content:"";
+    position:absolute;
+    inset:20px -18px -20px 18px;
+
+    border:2px solid #e7b5c6;
+    border-radius:38px;
+
+    transform:rotate(-7deg);
+}
+
+.hero-photo-frame::after{
+    content:"✦";
+    position:absolute;
+    right:-28px;
+    top:20px;
+
+    font-size:34px;
+    color:#d697ad;
+}
+
+.hero-photo{
+    position:relative;
+    z-index:2;
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    border-radius:35px;
+    border:9px solid rgba(255,250,243,.9);
+
+    box-shadow:var(--shadow);
+}
+
+.photo-label{
+    position:absolute;
+    z-index:3;
+
+    bottom:-17px;
+    left:-25px;
+
+    padding:10px 17px;
+
+    background:#fff8ed;
+    color:#b76e88;
+
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(184,111,141,.13);
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:19px;
+}
+
 /* GENERAL */
 
 section{
@@ -217,256 +374,63 @@ section{
 
 .description{
     max-width:650px;
-    font-size:14px;
+    font-size:13px;
     line-height:2;
-    color:#a87587;
-}
-
-/* HOME */
-
-#home{
-    min-height:100vh;
-    padding-top:145px;
-
-    display:grid;
-    grid-template-columns:1fr .85fr;
-    align-items:center;
-    gap:65px;
-}
-
-.hero-content{
-    position:relative;
-}
-
-.hero-badge{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-
-    padding:10px 16px;
-    margin-bottom:22px;
-
-    border-radius:30px;
-
-    background:rgba(255,255,255,.62);
-    border:1px solid rgba(218,157,179,.25);
-
-    font-size:11px;
-    letter-spacing:1px;
-    color:#b3748b;
-}
-
-.hero-badge i{
-    font-size:9px;
-}
-
-.hero-title{
-    font-family:'DM Serif Display',serif;
-    font-size:clamp(65px,9vw,110px);
-    line-height:.82;
-    color:#c67f98;
-}
-
-.hero-title .script{
-    display:block;
-    font-family:'Cormorant Garamond',serif;
-    font-style:italic;
-    font-weight:600;
-    font-size:1.05em;
-    color:#d49aae;
-    margin-left:35px;
-}
-
-.hero-subtitle{
-    margin:30px 0 25px;
-    max-width:550px;
-
-    font-size:15px;
-    line-height:1.9;
-    color:#a66f82;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-.button{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-
-    padding:13px 21px;
-
-    border-radius:17px;
-    text-decoration:none;
-
-    font-size:12px;
-    font-weight:600;
-
-    transition:.35s;
-}
-
-.button-main{
-    background:linear-gradient(135deg,#ce8da5,#ba728e);
-    color:var(--cream);
-    box-shadow:0 12px 25px rgba(184,111,141,.2);
-}
-
-.button-main:hover{
-    transform:translateY(-4px);
-}
-
-.button-soft{
-    background:rgba(255,255,255,.55);
-    border:1px solid rgba(205,143,166,.2);
-    color:#b27389;
-}
-
-.button-soft:hover{
-    transform:translateY(-4px);
-    background:rgba(255,255,255,.8);
-}
-
-/* MAIN PHOTO */
-
-.hero-photo-area{
-    position:relative;
-    display:flex;
-    justify-content:center;
-}
-
-.hero-photo-frame{
-    width:355px;
-    height:465px;
-    position:relative;
-}
-
-.hero-photo-frame::before{
-    content:"";
-    position:absolute;
-    inset:-16px 16px 16px -16px;
-
-    border:2px solid rgba(214,150,174,.45);
-    border-radius:52% 48% 45% 55%;
-
-    transform:rotate(-7deg);
-}
-
-.hero-photo-frame::after{
-    content:"";
-    position:absolute;
-    inset:15px -15px -15px 15px;
-
-    background:rgba(247,214,225,.55);
-    border-radius:45% 55% 50% 45%;
-
-    z-index:-1;
-}
-
-.hero-photo{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-
-    border-radius:50% 50% 27px 27px;
-
-    border:8px solid rgba(255,250,245,.8);
-
-    box-shadow:var(--shadow);
-}
-
-.photo-label{
-    position:absolute;
-    bottom:25px;
-    left:-35px;
-
-    padding:13px 18px;
-
-    background:rgba(255,248,239,.78);
-    backdrop-filter:blur(15px);
-
-    border:1px solid rgba(255,255,255,.8);
-    border-radius:18px;
-
-    box-shadow:var(--shadow);
-
-    font-size:11px;
-    color:#b27288;
+    color:#a57485;
 }
 
 /* MUSIC */
 
-.music-card{
-    margin-top:35px;
-
-    display:flex;
-    align-items:center;
-    gap:18px;
-
-    padding:18px 21px;
-
-    background:rgba(255,247,239,.68);
-    backdrop-filter:blur(15px);
-
-    border:1px solid rgba(218,157,179,.2);
-    border-radius:22px;
-
-    box-shadow:0 12px 35px rgba(184,111,141,.09);
-
-    position:relative;
-    overflow:hidden;
+#music{
+    padding-top:90px;
 }
 
-.music-card::after{
-    content:"♪  ♫  ♪  ♫";
-    position:absolute;
-    right:20px;
-    top:8px;
+.music-card{
+    margin-top:38px;
 
-    font-size:28px;
-    letter-spacing:7px;
-    color:rgba(194,124,150,.12);
+    display:grid;
+    grid-template-columns:75px 1fr;
+    gap:22px;
+    align-items:center;
 
-    pointer-events:none;
+    padding:25px;
+
+    background:rgba(255,250,244,.68);
+    border:1px solid rgba(255,255,255,.9);
+
+    border-radius:30px;
+    box-shadow:var(--shadow);
 }
 
 .music-icon{
-    width:48px;
-    height:48px;
-    flex-shrink:0;
+    width:75px;
+    height:75px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    border-radius:15px;
+    border-radius:23px;
 
-    background:#f4d3df;
-    color:#b96d88;
+    background:#f5d7e2;
+    color:#bd7690;
 
-    font-size:19px;
+    font-size:25px;
 }
 
-.music-info{
-    flex:1;
+.music-label{
+    font-size:9px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#c28ba0;
+    margin-bottom:4px;
 }
 
 .music-title{
     font-family:'Cormorant Garamond',serif;
-    font-size:24px;
-    font-weight:700;
+    font-size:27px;
     color:#b86f89;
-    letter-spacing:5px;
-}
-
-.music-label{
-    font-size:10px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    color:#c08a9e;
-    margin-bottom:3px;
+    margin-bottom:8px;
 }
 
 audio{
@@ -498,201 +462,117 @@ audio{
     border:7px solid rgba(255,249,241,.75);
 
     box-shadow:var(--shadow);
+
+    transform:rotate(-3deg);
 }
 
-.about-sticker{
+.about-image::before{
+    content:"♡";
     position:absolute;
-    right:10px;
-    bottom:-25px;
 
-    width:120px;
-    height:120px;
+    left:-18px;
+    top:-22px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    text-align:center;
-
-    border-radius:50%;
-
-    background:#f4d2df;
-    border:5px solid #fff7ed;
-
-    color:#b86f89;
-
-    font-family:'Cormorant Garamond',serif;
-    font-size:18px;
-    font-weight:700;
-
-    transform:rotate(8deg);
+    font-size:36px;
+    color:#d694ab;
+    z-index:4;
 }
 
-.about-text{
-    padding:15px 0;
+.about-text .description{
+    white-space:pre-line;
+    margin-bottom:25px;
 }
 
-.about-highlight{
-    margin-top:25px;
-
+.about-mini-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-top:25px;
 }
 
-.info-box{
-    padding:17px;
+.about-mini{
+    padding:16px 12px;
 
-    border-radius:19px;
+    background:rgba(255,250,244,.65);
+    border:1px solid rgba(255,255,255,.9);
 
-    background:rgba(255,255,255,.48);
-    border:1px solid rgba(214,150,174,.18);
+    border-radius:18px;
 }
 
-.info-box small{
+.about-mini span{
     display:block;
-    font-size:10px;
-    text-transform:uppercase;
+    font-size:9px;
     letter-spacing:1px;
+    text-transform:uppercase;
     color:#c18ba0;
-    margin-bottom:4px;
+    margin-bottom:6px;
 }
 
-.info-box strong{
-    color:#b96f88;
-    font-family:'Cormorant Garamond',serif;
-    font-size:20px;
+.about-mini strong{
+    font-size:11px;
+    font-weight:500;
+    color:#a76b81;
 }
 
 /* CV */
 
-.cv-card{
+.education-card{
     margin-top:40px;
 
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:.9fr 1.1fr;
     gap:35px;
+    align-items:center;
 
-    padding:25px;
+    padding:22px;
 
-    border-radius:31px;
+    background:rgba(255,250,244,.65);
+    border:1px solid rgba(255,255,255,.9);
 
-    background:rgba(255,250,243,.65);
-    backdrop-filter:blur(15px);
-
-    border:1px solid rgba(255,255,255,.8);
-
+    border-radius:32px;
     box-shadow:var(--shadow);
+}
 
-    position:relative;
+.education-image{
     overflow:hidden;
+    border-radius:25px;
+    height:330px;
 }
 
-.cv-card::before{
-    content:"CV";
-    position:absolute;
-    right:22px;
-    top:12px;
-
-    font-family:'DM Serif Display',serif;
-    font-size:88px;
-
-    color:rgba(216,143,169,.08);
-    pointer-events:none;
-}
-
-.cv-image{
-    height:340px;
-    overflow:hidden;
-    border-radius:24px;
-    position:relative;
-}
-
-.cv-image::after{
-    content:"SMKN 42 JAKARTA";
-    position:absolute;
-    left:18px;
-    bottom:18px;
-
-    padding:8px 12px;
-
-    border-radius:12px;
-
-    background:rgba(255,248,239,.82);
-    backdrop-filter:blur(10px);
-
-    color:#b66f87;
-
-    font-size:9px;
-    letter-spacing:2px;
-}
-
-.cv-image img{
+.education-image img{
     width:100%;
     height:100%;
     object-fit:cover;
-    transition:.6s;
+    transition:.5s;
 }
 
-.cv-card:hover .cv-image img{
+.education-card:hover .education-image img{
     transform:scale(1.05);
 }
 
-.cv-content{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    position:relative;
-    z-index:2;
+.education-content{
+    padding:15px 15px 15px 5px;
 }
 
-.cv-label{
-    font-size:11px;
+.education-year{
+    font-size:9px;
     letter-spacing:3px;
-    text-transform:uppercase;
-    color:#c28aa0;
+    color:#c18aa0;
     margin-bottom:10px;
 }
 
-.cv-content h3{
+.education-content h3{
     font-family:'DM Serif Display',serif;
-    font-size:38px;
+    font-size:35px;
+    font-weight:400;
     color:#bd7892;
     margin-bottom:14px;
 }
 
-.cv-content p{
+.education-content p{
     font-size:13px;
     line-height:2;
     color:#a87587;
-}
-
-.cv-tag{
-    display:inline-block;
-    width:max-content;
-
-    margin-top:20px;
-    padding:9px 14px;
-
-    background:#f5d6e1;
-    color:#b86f89;
-
-    border-radius:13px;
-
-    font-size:10px;
-    letter-spacing:1px;
-}
-
-.cv-meta{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-
-    margin-top:18px;
-
-    font-size:10px;
-    letter-spacing:.8px;
-    color:#bd8298;
 }
 
 /* SKILLS */
@@ -706,51 +586,67 @@ audio{
 }
 
 .skill-card{
-    padding:25px 20px;
+    padding:27px 20px;
 
-    min-height:170px;
+    min-height:230px;
 
-    background:rgba(255,250,244,.6);
+    background:rgba(255,250,244,.66);
+    border:1px solid rgba(255,255,255,.9);
 
-    border:1px solid rgba(255,255,255,.85);
-    border-radius:24px;
+    border-radius:25px;
 
-    box-shadow:0 15px 40px rgba(184,111,141,.08);
+    transition:.35s;
+}
 
-    transition:.4s;
+.skill-card:nth-child(2){
+    transform:translateY(18px);
+}
+
+.skill-card:nth-child(4){
+    transform:translateY(12px);
 }
 
 .skill-card:hover{
     transform:translateY(-8px) rotate(-1deg);
+    box-shadow:var(--shadow);
+}
+
+.skill-card:nth-child(2):hover{
+    transform:translateY(7px) rotate(1deg);
+}
+
+.skill-card:nth-child(4):hover{
+    transform:translateY(1px) rotate(-1deg);
 }
 
 .skill-icon{
-    width:45px;
-    height:45px;
+    width:48px;
+    height:48px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    border-radius:14px;
+    border-radius:15px;
 
-    background:#f5d6e1;
-    color:#b86f89;
+    background:#f5d9e3;
+    color:#bd7690;
 
     margin-bottom:18px;
 }
 
 .skill-card h3{
     font-family:'Cormorant Garamond',serif;
-    font-size:22px;
-    color:#b86f89;
-    margin-bottom:7px;
+    font-size:27px;
+    font-weight:600;
+    color:#b96f89;
+    margin-bottom:8px;
 }
 
 .skill-card p{
     font-size:11px;
-    line-height:1.8;
-    color:#ad7b8c;
+    line-height:1.9;
+    color:#a87989;
 }
 
 /* HOBBIES */
@@ -760,49 +656,52 @@ audio{
 
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:22px;
+    gap:25px;
 }
 
 .hobby-card{
     position:relative;
-    overflow:hidden;
+    padding:12px;
 
-    border-radius:27px;
+    background:rgba(255,250,244,.72);
 
-    background:rgba(255,250,244,.65);
-    border:1px solid rgba(255,255,255,.8);
+    border:1px solid rgba(255,255,255,.9);
 
-    box-shadow:var(--shadow);
+    border-radius:28px;
+
+    box-shadow:0 15px 40px rgba(184,111,141,.09);
 
     transition:.4s;
 }
 
-.hobby-card:hover{
-    transform:translateY(-8px);
+.hobby-card:nth-child(1){
+    transform:rotate(-2deg);
 }
 
 .hobby-card:nth-child(2){
-    transform:translateY(24px);
-}
-
-.hobby-card:nth-child(2):hover{
-    transform:translateY(16px) rotate(1deg);
+    transform:translateY(25px) rotate(2deg);
 }
 
 .hobby-card:nth-child(3){
-    border-radius:27px 55px 27px 27px;
+    transform:rotate(-1deg);
+}
+
+.hobby-card:hover{
+    transform:translateY(-10px) rotate(0deg);
+    box-shadow:var(--shadow);
 }
 
 .hobby-image{
-    height:300px;
+    height:260px;
     overflow:hidden;
+    border-radius:21px;
 }
 
 .hobby-image img{
     width:100%;
     height:100%;
     object-fit:cover;
-    transition:.6s;
+    transition:.5s;
 }
 
 .hobby-card:hover .hobby-image img{
@@ -810,21 +709,20 @@ audio{
 }
 
 .hobby-info{
-    padding:19px 20px 22px;
+    padding:15px 7px 9px;
 }
 
 .hobby-info small{
-    font-size:9px;
+    font-size:8px;
     letter-spacing:2px;
-    color:#c38ca0;
+    color:#c18aa0;
 }
 
 .hobby-info h3{
-    margin-top:5px;
-
     font-family:'Cormorant Garamond',serif;
-    font-size:26px;
-    color:#b96f89;
+    font-size:28px;
+    font-weight:600;
+    color:#b76f89;
 }
 
 /* PROJECT */
@@ -833,30 +731,30 @@ audio{
     margin-top:40px;
 
     display:grid;
-    grid-template-columns:1.05fr .95fr;
+    grid-template-columns:1fr 1fr;
     gap:35px;
+    align-items:center;
 
-    padding:25px;
+    padding:22px;
 
-    border-radius:31px;
+    background:rgba(255,250,244,.7);
+    border:1px solid rgba(255,255,255,.9);
 
-    background:rgba(255,250,243,.65);
-    border:1px solid rgba(255,255,255,.8);
-
+    border-radius:34px;
     box-shadow:var(--shadow);
 }
 
 .project-image{
-    min-height:370px;
+    height:390px;
     overflow:hidden;
-    border-radius:24px;
+    border-radius:27px;
 }
 
 .project-image img{
     width:100%;
     height:100%;
     object-fit:cover;
-    transition:.6s;
+    transition:.5s;
 }
 
 .project-card:hover .project-image img{
@@ -864,163 +762,184 @@ audio{
 }
 
 .project-content{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+    padding:15px;
 }
 
 .project-number{
-    font-size:10px;
+    font-size:9px;
     letter-spacing:3px;
     color:#c18aa0;
-    margin-bottom:10px;
+    margin-bottom:12px;
 }
 
 .project-content h3{
     font-family:'DM Serif Display',serif;
-    font-size:40px;
-    color:#bd7892;
-    margin-bottom:15px;
+    font-size:42px;
+    line-height:1;
+    font-weight:400;
+    color:#be7892;
+    margin-bottom:18px;
 }
 
 .project-content p{
     font-size:13px;
     line-height:2;
-    color:#a87587;
+    color:#a57485;
+    margin-bottom:25px;
 }
 
 .project-button{
     display:inline-flex;
     align-items:center;
-    gap:8px;
+    gap:10px;
 
-    width:max-content;
+    padding:13px 18px;
 
-    margin-top:25px;
-    padding:12px 17px;
+    background:#d58ba6;
+    color:white;
 
-    border-radius:15px;
-
+    border-radius:16px;
     text-decoration:none;
 
-    background:#f4d4df;
-    color:#b66e87;
-
-    font-size:11px;
-    font-weight:600;
+    font-size:10px;
 
     transition:.3s;
 }
 
 .project-button:hover{
-    transform:translateY(-3px);
+    transform:translateY(-4px);
+    box-shadow:0 12px 25px rgba(184,111,141,.2);
 }
 
 /* MEMORIES */
 
 .memories-grid{
-    margin-top:40px;
+    margin-top:45px;
 
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
+    grid-template-columns:repeat(5,1fr);
+    gap:17px;
+    align-items:start;
 }
 
 .memory{
-    height:270px;
-    overflow:hidden;
-
-    border-radius:22px;
-
-    border:5px solid rgba(255,249,241,.72);
-
-    box-shadow:0 14px 35px rgba(184,111,141,.12);
-
+    position:relative;
     cursor:pointer;
+
+    padding:7px;
+
+    background:#fffaf3;
+
+    border-radius:17px;
+
+    box-shadow:0 12px 30px rgba(184,111,141,.11);
 
     transition:.4s;
 }
 
-.memory:nth-child(2),
-.memory:nth-child(5),
-.memory:nth-child(8){
-    transform:translateY(25px);
+.memory:nth-child(1){
+    transform:rotate(-3deg);
 }
 
-.memory:nth-child(3),
-.memory:nth-child(7),
+.memory:nth-child(2){
+    transform:translateY(15px) rotate(2deg);
+}
+
+.memory:nth-child(3){
+    transform:rotate(-1deg);
+}
+
+.memory:nth-child(4){
+    transform:translateY(20px) rotate(3deg);
+}
+
+.memory:nth-child(5){
+    transform:rotate(-2deg);
+}
+
+.memory:nth-child(6){
+    transform:translateY(17px) rotate(2deg);
+}
+
+.memory:nth-child(7){
+    transform:rotate(-2deg);
+}
+
+.memory:nth-child(8){
+    transform:translateY(18px) rotate(3deg);
+}
+
+.memory:nth-child(9){
+    transform:rotate(-2deg);
+}
+
 .memory:nth-child(10){
-    border-radius:45px 18px 45px 18px;
+    transform:translateY(12px) rotate(2deg);
 }
 
 .memory:hover{
-    transform:translateY(-6px) rotate(-1deg);
-}
-
-.memory:nth-child(2):hover,
-.memory:nth-child(5):hover,
-.memory:nth-child(8):hover{
-    transform:translateY(17px) rotate(1deg);
+    transform:translateY(-9px) rotate(0deg) scale(1.03);
+    z-index:5;
+    box-shadow:var(--shadow);
 }
 
 .memory img{
+    display:block;
+
     width:100%;
-    height:100%;
+    aspect-ratio:1/1.15;
+
     object-fit:cover;
 
-    transition:.6s;
-}
-
-.memory:hover img{
-    transform:scale(1.08);
+    border-radius:12px;
 }
 
 /* CONTACT */
 
 .contact-box{
-    padding:55px;
-
+    padding:55px 35px;
     text-align:center;
+
+    background:rgba(255,250,244,.68);
+    border:1px solid rgba(255,255,255,.9);
 
     border-radius:35px;
 
-    background:rgba(255,249,242,.68);
-    backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.9);
-
     box-shadow:var(--shadow);
+}
+
+.contact-box .section-number{
+    text-align:center;
 }
 
 .contact-box h3{
     font-family:'DM Serif Display',serif;
     font-size:48px;
-    color:#bd7892;
-    margin-bottom:14px;
+    font-weight:400;
+    color:#be7892;
+    margin-bottom:12px;
 }
 
 .contact-box p{
     max-width:600px;
-    margin:auto;
+    margin:0 auto;
 
-    font-size:13px;
+    font-size:12px;
     line-height:2;
-    color:#a87587;
+
+    color:#a57485;
 }
 
 .social-list{
-    margin-top:25px;
-
     display:flex;
     justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
-
-    gap:12px;
+    gap:14px;
+    margin-top:27px;
 }
 
 .social{
-    min-height:50px;
+    width:53px;
+    height:53px;
 
     display:flex;
     align-items:center;
@@ -1028,32 +947,19 @@ audio{
 
     border-radius:18px;
 
-    background:#f5d7e1;
-    color:#b66e88;
-
     text-decoration:none;
+
+    background:#f7dce6;
+    color:#b86f89;
+
+    font-size:21px;
 
     transition:.35s;
 }
 
-.social-with-text{
-    width:auto;
-    padding:0 16px;
-    gap:9px;
-}
-
-.social-with-text span{
-    font-size:11px;
-    color:#b66e88;
-}
-
-.social-icon-only{
-    width:50px;
-}
-
 .social:hover{
-    transform:translateY(-5px) rotate(2deg);
-    background:#edc2d2;
+    transform:translateY(-6px) rotate(-5deg);
+    background:#efc6d5;
 }
 
 /* TESTIMONIALS */
@@ -1067,74 +973,104 @@ audio{
 }
 
 .testimonial{
-    padding:27px;
+    position:relative;
 
-    background:rgba(255,250,244,.63);
+    padding:28px 24px;
 
-    border:1px solid rgba(255,255,255,.85);
+    min-height:225px;
+
+    background:rgba(255,250,244,.68);
+    border:1px solid rgba(255,255,255,.9);
+
     border-radius:25px;
 
-    box-shadow:0 15px 40px rgba(184,111,141,.08);
+    box-shadow:0 12px 35px rgba(184,111,141,.08);
 
     transition:.35s;
 }
 
+.testimonial:nth-child(2),
+.testimonial:nth-child(5){
+    transform:translateY(17px);
+}
+
+.testimonial:nth-child(3),
+.testimonial:nth-child(6){
+    transform:translateY(-5px);
+}
+
+.testimonial:nth-child(7){
+    transform:translateY(10px);
+}
+
 .testimonial:hover{
-    transform:translateY(-6px) rotate(.5deg);
+    transform:translateY(-8px) rotate(-1deg);
+    box-shadow:var(--shadow);
 }
 
 .quote{
     font-family:'DM Serif Display',serif;
-    font-size:50px;
+    font-size:55px;
     line-height:.5;
-    color:#e0a9bc;
-    margin-bottom:18px;
+    color:#e2b0c2;
+    margin-bottom:20px;
 }
 
 .testimonial p{
-    font-size:12px;
+    font-size:11px;
     line-height:1.9;
-    color:#a87587;
+    color:#9f7181;
+    margin-bottom:20px;
 }
 
 .testimonial-name{
-    margin-top:16px;
-
     font-family:'Cormorant Garamond',serif;
-    font-size:17px;
-    font-weight:700;
-
-    color:#b86f89;
+    font-size:19px;
+    font-weight:600;
+    color:#b66e88;
 }
 
 /* FINAL */
 
 .final-section{
-    padding-top:30px;
-    padding-bottom:90px;
+    min-height:80vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:min(1120px,calc(100% - 34px));
+    margin:auto;
+
+    position:relative;
+    z-index:1;
 }
 
 .final-card{
-    padding:60px 30px;
+    width:100%;
+    max-width:850px;
+
+    padding:75px 45px;
 
     text-align:center;
 
-    border-radius:35px;
-
     background:
-        radial-gradient(circle at 50% 0%,rgba(248,212,225,.8),transparent 55%),
-        rgba(255,249,242,.75);
+        radial-gradient(circle at 20% 20%,rgba(249,220,231,.7),transparent 30%),
+        radial-gradient(circle at 80% 80%,rgba(255,243,230,.9),transparent 30%),
+        rgba(255,250,244,.78);
 
-    border:1px solid rgba(255,255,255,.9);
+    border:1px solid rgba(255,255,255,.95);
+    border-radius:40px;
 
     box-shadow:var(--shadow);
 }
 
 .final-card h2{
     font-family:'DM Serif Display',serif;
-    font-size:48px;
+    font-size:clamp(43px,6vw,65px);
+    font-weight:400;
     color:#bd7892;
-    margin-bottom:15px;
+    margin-bottom:20px;
 }
 
 .final-card p{
@@ -1143,64 +1079,33 @@ audio{
 
     font-size:13px;
     line-height:2;
-    color:#a87587;
+
+    color:#a57485;
 }
 
 .message-button{
-    margin-top:25px;
+    margin-top:30px;
 
     border:0;
+    cursor:pointer;
 
-    padding:14px 21px;
+    padding:14px 22px;
 
-    border-radius:17px;
+    border-radius:18px;
 
-    background:linear-gradient(135deg,#ce8da5,#ba728e);
+    background:#d58ba6;
     color:white;
 
     font-family:'Poppins',sans-serif;
-    font-size:12px;
-    font-weight:600;
+    font-size:11px;
 
-    cursor:pointer;
+    box-shadow:0 12px 30px rgba(184,111,141,.2);
 
-    box-shadow:0 12px 25px rgba(184,111,141,.2);
-
-    transition:.35s;
+    transition:.3s;
 }
 
 .message-button:hover{
-    transform:translateY(-4px) scale(1.03);
-}
-
-/* FOOTER */
-
-footer{
-    padding:35px 20px 45px;
-
-    text-align:center;
-
-    font-size:11px;
-    letter-spacing:1px;
-
-    color:#bc8297;
-}
-
-footer span{
-    color:#d795ad;
-}
-
-/* REVEAL */
-
-.reveal{
-    opacity:0;
-    transform:translateY(35px);
-    transition:opacity .8s ease,transform .8s ease;
-}
-
-.reveal.active{
-    opacity:1;
-    transform:translateY(0);
+    transform:translateY(-5px) scale(1.03);
 }
 
 /* BURST */
@@ -1217,58 +1122,148 @@ footer span{
 }
 
 @keyframes burstAnimation{
+
     0%{
+        transform:
+            translate(-50%,-50%)
+            scale(.3)
+            rotate(0deg);
+
         opacity:1;
-        transform:translate(-50%,-50%) scale(.5) rotate(0deg);
     }
 
     100%{
-        opacity:0;
-
         transform:
             translate(
                 calc(-50% + var(--x)),
                 calc(-50% + var(--y))
             )
-            scale(1.3)
+            scale(1.25)
             rotate(var(--rotate));
+
+        opacity:0;
     }
+
+}
+
+/* REVEAL */
+
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* FOOTER */
+
+footer{
+    position:relative;
+    z-index:1;
+
+    padding:35px 20px 50px;
+
+    text-align:center;
+
+    font-size:10px;
+    letter-spacing:1px;
+
+    color:#bd8298;
+}
+
+footer span{
+    color:#dc9bb0;
+    margin:0 5px;
 }
 
 /* RESPONSIVE */
 
-@media(max-width:900px){
+@media(max-width:1000px){
 
     .nav-links{
-        display:none;
+        gap:0;
     }
 
-    .navbar{
-        padding:12px 15px;
+    .nav-links a{
+        padding:8px 8px;
+        font-size:10px;
     }
 
-    #home{
+    .hero{
         grid-template-columns:1fr;
         text-align:center;
         gap:55px;
+    }
+
+    .hero-description{
+        margin-left:auto;
+        margin-right:auto;
     }
 
     .hero-buttons{
         justify-content:center;
     }
 
-    .hero-subtitle{
+    .hero-photo-frame{
+        width:330px;
+        height:440px;
+    }
+
+    .skills-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .testimonials{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:760px){
+
+    .navbar{
+        top:10px;
+        padding:10px 12px;
+        border-radius:20px;
+    }
+
+    .logo{
+        font-size:20px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .nav-icons{
         margin-left:auto;
-        margin-right:auto;
+    }
+
+    section{
+        padding:80px 0;
+    }
+
+    .hero{
+        padding-top:95px;
+    }
+
+    .hero-title{
+        font-size:65px;
+    }
+
+    .hero-title span{
+        margin-left:25px;
     }
 
     .hero-photo-frame{
         width:310px;
         height:410px;
-    }
-
-    .photo-label{
-        left:-10px;
     }
 
     .about-layout{
@@ -1281,7 +1276,7 @@ footer span{
         justify-content:center;
     }
 
-    .cv-card,
+    .education-card,
     .project-card{
         grid-template-columns:1fr;
     }
@@ -1294,12 +1289,56 @@ footer span{
         grid-template-columns:1fr 1fr;
     }
 
-    .hobby-card:nth-child(2){
+    .memories-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .testimonials{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:520px){
+
+    .hero-title{
+        font-size:55px;
+    }
+
+    .hero-title span{
+        margin-left:10px;
+    }
+
+    .hero-photo-frame{
+        width:275px;
+        height:365px;
+    }
+
+    .about-mini-grid{
+        grid-template-columns:1fr;
+    }
+
+    .skills-grid{
+        grid-template-columns:1fr;
+    }
+
+    .skill-card:nth-child(2),
+    .skill-card:nth-child(4){
         transform:none;
     }
 
-    .hobby-card:nth-child(2):hover{
-        transform:translateY(-8px);
+    .hobbies-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hobby-card:nth-child(1),
+    .hobby-card:nth-child(2),
+    .hobby-card:nth-child(3){
+        transform:none;
+    }
+
+    .project-content h3{
+        font-size:35px;
     }
 
     .memories-grid{
@@ -1307,91 +1346,29 @@ footer span{
     }
 
     .testimonials{
-        grid-template-columns:1fr 1fr;
-    }
-}
-
-@media(max-width:600px){
-
-    section{
-        padding:80px 0;
-    }
-
-    #home{
-        padding-top:130px;
-    }
-
-    .hero-title{
-        font-size:64px;
-    }
-
-    .hero-photo-frame{
-        width:270px;
-        height:360px;
-    }
-
-    .section-title{
-        font-size:48px;
-    }
-
-    .about-highlight{
         grid-template-columns:1fr;
     }
 
-    .skills-grid,
-    .hobbies-grid,
-    .memories-grid,
-    .testimonials{
-        grid-template-columns:1fr;
-    }
-
-    .memory{
-        height:350px;
-    }
-
-    .memory:nth-child(2),
-    .memory:nth-child(5),
-    .memory:nth-child(8){
+    .testimonial:nth-child(2),
+    .testimonial:nth-child(3),
+    .testimonial:nth-child(5),
+    .testimonial:nth-child(6),
+    .testimonial:nth-child(7){
         transform:none;
     }
 
-    .memory:nth-child(2):hover,
-    .memory:nth-child(5):hover,
-    .memory:nth-child(8):hover{
-        transform:translateY(-6px) rotate(1deg);
-    }
-
     .contact-box{
-        padding:40px 20px;
+        padding:45px 20px;
     }
 
-    .contact-box h3,
-    .final-card h2{
+    .contact-box h3{
         font-size:40px;
     }
 
-    .cv-image{
-        height:270px;
+    .final-card{
+        padding:55px 23px;
     }
 
-    .project-image{
-        min-height:250px;
-    }
-
-    .social-list{
-        display:grid;
-        grid-template-columns:1fr 1fr;
-    }
-
-    .social-with-text{
-        width:100%;
-        justify-content:center;
-    }
-
-    .social-icon-only{
-        width:50px;
-        justify-self:center;
-    }
 }
 
 </style>
@@ -1399,7 +1376,7 @@ footer span{
 
 <body>
 
-<!-- FLOATING DECORATIONS -->
+<!-- FLOATING FLOWERS -->
 
 <div class="flower">✿</div>
 <div class="flower">♡</div>
@@ -1412,10 +1389,18 @@ footer span{
 <nav class="navbar">
 
 <a href="#home" class="logo">
-    Della <span>Aurellia</span> ♡
+    Aurel<span>♡</span>
 </a>
 
 <ul class="nav-links">
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#music">Music</a>
+</li>
 
 <li>
 <a href="#about">About</a>
@@ -1434,31 +1419,27 @@ footer span{
 </li>
 
 <li>
-<a href="#projects">Projects</a>
+<a href="#projects">Karya</a>
 </li>
 
 <li>
 <a href="#memories">Memories</a>
 </li>
 
+<li>
+<a href="#contact">Contact</a>
+</li>
+
 </ul>
 
 <div class="nav-icons">
 
-<a
-href="https://www.instagram.com/bbvterfliee._/"
-target="_blank"
-title="Instagram"
->
-<i class="fa-brands fa-instagram"></i>
+<a href="#testimonials" title="Testimonials">
+    <i class="fa-regular fa-comment"></i>
 </a>
 
-<a
-href="https://www.tiktok.com/@aurelliaaaaaaa._"
-target="_blank"
-title="TikTok"
->
-<i class="fa-brands fa-tiktok"></i>
+<a href="#final" title="Message">
+    <i class="fa-regular fa-heart"></i>
 </a>
 
 </div>
@@ -1468,37 +1449,34 @@ title="TikTok"
 
 <!-- HOME -->
 
-<section id="home">
+<section class="hero" id="home">
 
-<div class="hero-content reveal">
+<div class="hero-text reveal">
 
-<div class="hero-badge">
-    <i class="fa-solid fa-sparkles"></i>
-    PERSONAL PORTFOLIO
+<div class="hero-kicker">
+    Personal Student Portfolio
 </div>
 
 <h1 class="hero-title">
     Della
-    <span class="script">
-        Aurellia ♡
-    </span>
+    <span>Aurellia.</span>
 </h1>
 
-<p class="hero-subtitle">
-    Haiii, aku Aurel! Selamat datang di
-    little corner of my internet — tempat
-    kecil untuk menyimpan cerita, karya,
-    hal-hal yang aku suka, dan perjalanan
-    kecilku sebagai seorang pelajar.
+<p class="hero-description">
+    Hai, aku Aurel ♡
+    <br>
+    Seorang siswa yang aktif, kreatif,
+    dan pantang menyerah dalam menghadapi
+    berbagai masalah dan mencoba hal baru.
 </p>
 
 <div class="hero-buttons">
 
 <a
 href="#about"
-class="button button-main"
+class="button button-primary"
 >
-    Kenalan yuk
+    Kenal aku
     <i class="fa-solid fa-arrow-down"></i>
 </a>
 
@@ -1551,17 +1529,16 @@ alt="Foto Della Aurellia"
 </h2>
 
 <p class="description">
-    Satu lagu kecil yang menemani
-    perjalanan dan suasana hatiku.
+    Salah satu lagu yang menemani
+    perjalanan kecilku.
 </p>
 
 </div>
 
-
 <div class="music-card reveal">
 
 <div class="music-icon">
-    <i class="fa-solid fa-headphones"></i>
+    <i class="fa-solid fa-music"></i>
 </div>
 
 <div class="music-info">
@@ -1576,8 +1553,8 @@ alt="Foto Della Aurellia"
 
 <audio controls>
     <source
-    src="./hate-that-i-made-you-love-me.mp3"
-    type="audio/mpeg">
+    src="./hate that i made you love me mp3.mp3"
+    type="audio/mp4">
 </audio>
 
 </div>
@@ -1596,13 +1573,9 @@ alt="Foto Della Aurellia"
 <div class="about-image reveal">
 
 <img
-src="./foto-profil-hero.jpeg"
+src="./foto profil hero.jpeg"
 alt="Foto Aurel"
 >
-
-<div class="about-sticker">
-    anak 42 ♡
-</div>
 
 </div>
 
@@ -1622,7 +1595,7 @@ alt="Foto Aurel"
 Haiii! Aku Aurel ♡
 
 Aku adalah seorang pelajar dari
-SMKN 42 Jakarta atau anak 42 yang
+SMKN 42 Jakarta yang
 sedang menikmati proses belajar,
 mencoba hal-hal baru, dan memahami
 diri sendiri.
@@ -1630,38 +1603,48 @@ diri sendiri.
 Aku suka menulis, bernyanyi, dan
 menonton film. Aku juga senang
 membuat sesuatu yang bisa menjadi
-tempat untuk menyimpan cerita dan
-kenangan.
-
-Website ini adalah little space milikku
-untuk menyimpan beberapa hal tentang
-aku, mulai dari kesukaan, hobi, karya,
-sampai momen-momen kecil yang ingin
-tetap aku ingat.
+bagian dari proses belajarku.
 
 </p>
 
+<div class="about-mini-grid">
 
-<div class="about-highlight">
+<div class="about-mini">
 
-<div class="info-box">
-<small>school</small>
-<strong>SMKN 42 Jakarta</strong>
+<span>
+    Full Name
+</span>
+
+<strong>
+    Della Aurellia
+</strong>
+
 </div>
 
-<div class="info-box">
-<small>nickname</small>
-<strong>Aurel ♡</strong>
+
+<div class="about-mini">
+
+<span>
+    Nickname
+</span>
+
+<strong>
+    Aurel
+</strong>
+
 </div>
 
-<div class="info-box">
-<small>likes</small>
-<strong>Writing & Singing</strong>
-</div>
 
-<div class="info-box">
-<small>happy when</small>
-<strong>Dihargai ♡</strong>
+<div class="about-mini">
+
+<span>
+    Likes
+</span>
+
+<strong>
+    Menghabiskan waktu untuk hal yang bermanfaat
+</strong>
+
 </div>
 
 </div>
@@ -1684,34 +1667,33 @@ tetap aku ingat.
 </div>
 
 <h2 class="section-title">
-    My <em>story.</em>
+    My <em>school.</em>
 </h2>
 
 <p class="description">
-    Sedikit tentang tempat aku belajar,
-    bertumbuh, dan menjalani perjalanan
-    baruku sebagai pelajar.
+    Tempat aku belajar, berkembang,
+    dan menjalani banyak cerita baru.
 </p>
 
 </div>
 
 
-<div class="cv-card reveal">
+<div class="education-card reveal">
 
-<div class="cv-image">
+<div class="education-image">
 
 <img
-src="./smkn-42.jpeg"
+src="./smkn 42.jpeg"
 alt="SMKN 42 Jakarta"
 >
 
 </div>
 
 
-<div class="cv-content">
+<div class="education-content">
 
-<div class="cv-label">
-    MY CURRENT CHAPTER
+<div class="education-year">
+    CURRENT EDUCATION
 </div>
 
 <h3>
@@ -1719,22 +1701,13 @@ alt="SMKN 42 Jakarta"
 </h3>
 
 <p>
-    SMKN 42 Jakarta menjadi bagian dari
-    perjalanan belajarku sejak 2026. Saat ini
-    aku berada di kelas X Manajemen Perkantoran 1,
-    sambil terus mencoba hal baru, mengembangkan
-    kemampuan, dan memahami diri sendiri.
+    Di sinilah aku menjalani perjalanan
+    sebagai seorang pelajar. Selain belajar
+    pelajaran sekolah, aku juga sedang
+    belajar memahami diri sendiri,
+    mencoba hal baru, dan mengembangkan
+    kemampuan yang aku punya.
 </p>
-
-<div class="cv-tag">
-    ANAK 42 ♡
-</div>
-
-<div class="cv-meta">
-    <span>2026</span>
-    <span>•</span>
-    <span>X Manajemen Perkantoran 1</span>
-</div>
 
 </div>
 
@@ -1854,7 +1827,7 @@ alt="SMKN 42 Jakarta"
 <div class="reveal">
 
 <div class="section-number">
-    05 — Hobbies & Favorites
+    04.5 — Hobbies & Favorites
 </div>
 
 <h2 class="section-title">
@@ -1877,7 +1850,7 @@ alt="SMKN 42 Jakarta"
 <div class="hobby-image">
 
 <img
-src="./hobi/hobi-nulis.jpeg"
+src="./hobi/hobi nulis.jpeg"
 alt="Writing"
 >
 
@@ -1903,7 +1876,7 @@ alt="Writing"
 <div class="hobby-image">
 
 <img
-src="./hobi/hobi-nyanyi.jpeg"
+src="./hobi/hobi nyanyi.jpeg"
 alt="Singing"
 >
 
@@ -1929,7 +1902,7 @@ alt="Singing"
 <div class="hobby-image">
 
 <img
-src="./hobi/hobi-nonton.jpeg"
+src="./hobi/hobi nonton.jpeg"
 alt="Watching Movies"
 >
 
@@ -1949,7 +1922,6 @@ alt="Watching Movies"
 
 </div>
 
-
 </div>
 
 </section>
@@ -1962,7 +1934,7 @@ alt="Watching Movies"
 <div class="reveal">
 
 <div class="section-number">
-    06 — Projects / Hasil Karya
+    05 — Projects / Hasil Karya
 </div>
 
 <h2 class="section-title">
@@ -1988,7 +1960,6 @@ alt="Website Aurelliee"
 
 </div>
 
-
 <div class="project-content">
 
 <div class="project-number">
@@ -2010,6 +1981,7 @@ alt="Website Aurelliee"
 <a
 href="https://dellaaurellia878-spec.github.io/Aurelliee05"
 target="_blank"
+rel="noopener noreferrer"
 class="project-button"
 >
     Buka website
@@ -2030,7 +2002,7 @@ class="project-button"
 <div class="reveal">
 
 <div class="section-number">
-    07 — Memories
+    06 — Memories
 </div>
 
 <h2 class="section-title">
@@ -2099,7 +2071,7 @@ class="project-button"
 <div class="contact-box reveal">
 
 <div class="section-number">
-    08 — Contact
+    07 — Contact
 </div>
 
 <h3>
@@ -2108,53 +2080,49 @@ class="project-button"
 
 <p>
     Kamu bisa menemukan dan menghubungi
-    aku melalui beberapa platform berikut.
-    Klik username atau icon untuk langsung
-    menuju akun maupun mengirim pesan.
+    saya melalui beberapa platform berikut.
+    Klik icon untuk langsung menuju akun
+    atau mengirim pesan.
 </p>
-
 
 <div class="social-list">
 
 <a
-class="social social-with-text"
+class="social"
 href="https://www.instagram.com/bbvterfliee._/"
 target="_blank"
+rel="noopener noreferrer"
 title="Instagram"
 >
     <i class="fa-brands fa-instagram"></i>
-    <span>@bbvterfliee._</span>
 </a>
 
-
 <a
-class="social social-with-text"
+class="social"
 href="https://www.tiktok.com/@aurelliaaaaaaa._"
 target="_blank"
+rel="noopener noreferrer"
 title="TikTok"
 >
     <i class="fa-brands fa-tiktok"></i>
-    <span>@aurelliaaaaaaa._</span>
 </a>
 
-
 <a
-class="social social-icon-only"
+class="social"
 href="https://wa.me/6285709980651"
 target="_blank"
+rel="noopener noreferrer"
 title="WhatsApp"
 >
     <i class="fa-brands fa-whatsapp"></i>
 </a>
 
-
 <a
-class="social social-with-text"
+class="social"
 href="mailto:dellaaurellia878@gmail.com"
 title="Email"
 >
     <i class="fa-solid fa-envelope"></i>
-    <span>dellaaurellia878@gmail.com</span>
 </a>
 
 </div>
@@ -2171,7 +2139,7 @@ title="Email"
 <div class="reveal">
 
 <div class="section-number">
-    09 — Testimonials
+    08 — Testimonials
 </div>
 
 <h2 class="section-title">
@@ -2179,7 +2147,7 @@ title="Email"
 </h2>
 
 <p class="description">
-    Enam kesan kecil tentang perjalanan,
+    Tujuh kesan kecil tentang perjalanan,
     usaha, dan karya Aurel.
 </p>
 
@@ -2199,7 +2167,7 @@ title="Email"
 </p>
 
 <div class="testimonial-name">
-    — Teman
+    — Andini 🌷
 </div>
 
 </div>
@@ -2216,7 +2184,7 @@ title="Email"
 </p>
 
 <div class="testimonial-name">
-    — Teman Sekelas
+    — Azzahra ✨
 </div>
 
 </div>
@@ -2233,7 +2201,7 @@ title="Email"
 </p>
 
 <div class="testimonial-name">
-    — Teman
+    — Almira 🦋
 </div>
 
 </div>
@@ -2250,7 +2218,7 @@ title="Email"
 </p>
 
 <div class="testimonial-name">
-    — Rekan
+    — Jihan 🎀
 </div>
 
 </div>
@@ -2267,7 +2235,7 @@ title="Email"
 </p>
 
 <div class="testimonial-name">
-    — Teman Belajar
+    — Keisha 🌸
 </div>
 
 </div>
@@ -2284,7 +2252,24 @@ title="Email"
 </p>
 
 <div class="testimonial-name">
-    — Support System
+    — Carissa 💗
+</div>
+
+</div>
+
+
+<div class="testimonial reveal">
+
+<div class="quote">“</div>
+
+<p>
+    Aurel selalu punya cara sendiri untuk
+    membuat proses belajar terasa lebih
+    seru dan penuh cerita.
+</p>
+
+<div class="testimonial-name">
+    — Nanda 🌙
 </div>
 
 </div>
@@ -2296,7 +2281,7 @@ title="Email"
 
 <!-- FINAL MESSAGE -->
 
-<section class="final-section">
+<section class="final-section" id="final">
 
 <div class="final-card reveal">
 
@@ -2345,7 +2330,9 @@ new IntersectionObserver(
         entries.forEach(function(entry){
 
             if(entry.isIntersecting){
+
                 entry.target.classList.add("active");
+
             }
 
         });
@@ -2357,7 +2344,9 @@ new IntersectionObserver(
 );
 
 revealElements.forEach(function(element){
+
     observer.observe(element);
+
 });
 
 
@@ -2498,7 +2487,6 @@ document
             overlay.style.cursor =
             "pointer";
 
-
             const bigImage =
             document.createElement("img");
 
@@ -2520,7 +2508,6 @@ document
             bigImage.style.border =
             "5px solid rgba(255,250,243,.8)";
 
-
             overlay.appendChild(
                 bigImage
             );
@@ -2528,7 +2515,6 @@ document
             document.body.appendChild(
                 overlay
             );
-
 
             overlay.addEventListener(
                 "click",
