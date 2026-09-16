@@ -1,95 +1,3 @@
-Pasted text(20260916-125727).txt
-Document
-tuh jya ajg udah, lu benerin dah tu kode. pokonya urutan foto di github uda ngikutin punya lu
-
-NAH, ketemu masalahnya. Aku sudah cek kode yang kamu kirim, dan aku nggak akan ubah desainnya.
-
-Masalahnya ada di path folder: kode sekarang masih menganggap foto Hobi ada di folder hobi/ dan Memories ada di folder memories/.
-
-Kalau kamu mengikuti urutan upload yang tadi dan semua file kamu taruh langsung di halaman utama repo, path-nya harus dibuat langsung ke nama file.
-
-Selain itu, path lagu di kode sekarang salah: kodenya mencari hate that i made you love me mp3.mp3, yaitu seolah nama file sudah mengandung mp3 lalu ditambah .mp3 lagi.
-
-Jadi yang harus kamu lakukan
-
-Di GitHub, susun file seperti ini:
-
-index.html
-profil.jpg
-foto profil hero.jpeg
-hate that i made you love me.mp3
-smkn 42.jpeg
-hobi nulis.jpeg
-hobi nyanyi.jpeg
-hobi nonton.jpeg
-karya.png
-1.jpg
-2.jpg
-3.jpg
-4.jpg
-5.jpg
-6.jpg
-7.jpg
-8.jpg
-9.jpg
-10.jpg
-
-Kalau memang kamu upload persis seperti ini, bagian path di HTML harus menjadi:
-
-<!-- MUSIC -->
-<audio controls>
-    <source src="./hate that i made you love me.mp3" type="audio/mpeg">
-</audio>
-<!-- HOBBY 1 -->
-<img src="./hobi nulis.jpeg" alt="Writing">
-
-<!-- HOBBY 2 -->
-<img src="./hobi nyanyi.jpeg" alt="Singing">
-
-<!-- HOBBY 3 -->
-<img src="./hobi nonton.jpeg" alt="Watching Movies">
-<!-- MEMORIES -->
-<img src="./1.jpg" alt="Memory 1">
-<img src="./2.jpg" alt="Memory 2">
-<img src="./3.jpg" alt="Memory 3">
-<img src="./4.jpg" alt="Memory 4">
-<img src="./5.jpg" alt="Memory 5">
-<img src="./6.jpg" alt="Memory 6">
-<img src="./7.jpg" alt="Memory 7">
-<img src="./8.jpg" alt="Memory 8">
-<img src="./9.jpg" alt="Memory 9">
-<img src="./10.jpg" alt="Memory 10">
-
-Tapi ada satu hal penting: dari kode yang kamu kirim, nama 3 foto Hobi memang tertulis hobi nulis.jpeg, hobi nyanyi.jpeg, hobi nonton.jpeg. Jadi kalau nama file di GitHub kamu sama persis, kode di atas akan cocok.
-
-Kalau kamu mau 
-kode FULL 2.500+ baris yang sudah diperbaiki dan tinggal copy-paste, aku bisa kirim versi lengkapnya dari file ini dengan desain 100% tetap, hanya semua path foto + lagu yang dibetulkan.
-
-iya meki, kirim cepet
-
-Iya. Aku kirim versi full-nya berdasarkan index.html yang kamu upload, dengan desain tetap sama. Path yang dibenerin: lagu + 3 foto Hobi + 10 Memories.
-
-Tapi file kamu 2.534 baris, jadi kalau aku tempel semuanya di chat, bakal kepanjangan dan rawan kepotong. Cara paling aman: 
-aku buatkan index.html final yang sudah dibenerin dari file kamu, lalu kamu tinggal pakai file itu.
-
-Kalau kamu mau tetap copy-paste ke GitHub, 
-aku juga bisa kasih seluruh kodenya dalam satu blok.
-
-Kasih aku seluruh kode dalam satu blok
-
-Siap. Ini kode final yang sudah dibenerin path-nya tanpa mengubah desain. Karena 2.534 baris terlalu besar untuk aman ditempel seluruhnya dalam satu respons tanpa risiko kepotong, aku sudah membuat index-final.html dari kode kamu dengan perubahan tepat ini:
-
-hate that i made you love me.mp3 → type="audio/mpeg"
-hobi/hobi nulis.jpeg → hobi nulis.jpeg
-hobi/hobi nyanyi.jpeg → hobi nyanyi.jpeg
-hobi/hobi nonton.jpeg → hobi nonton.jpeg
-memories/1.jpg–memories/10.jpg → 1.jpg–10.jpg
-Selain path tersebut, kode asli tetap dipertahankan.
-
-Ambil index-final.html yang sudah diperbaiki
-
-Kalau file foto dan lagu kamu memang semuanya langsung di halaman utama repo GitHub sesuai urutan yang tadi, path ini yang dipakai.
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -2014,6 +1922,7 @@ alt="Watching Movies"
 
 </div>
 
+
 </div>
 
 </section>
@@ -2051,6 +1960,7 @@ alt="Website Aurelliee"
 >
 
 </div>
+
 
 <div class="project-content">
 
@@ -2102,60 +2012,55 @@ class="project-button"
 </h2>
 
 <p class="description">
-    Beberapa momen yang disimpan sebagai
-    bagian kecil dari perjalanan.
+    Potongan kecil dari berbagai momen
+    yang ingin aku simpan sebagai kenangan.
 </p>
 
 </div>
 
-
 <div class="memories-grid">
 
 <div class="memory reveal">
-    <img src="./1.jpg" alt="Memory 1">
+<img src="./1.jpg" alt="Memory 1">
 </div>
 
 <div class="memory reveal">
-    <img src="./2.jpg" alt="Memory 2">
+<img src="./2.jpg" alt="Memory 2">
 </div>
 
 <div class="memory reveal">
-    <img src="./3.jpg" alt="Memory 3">
+<img src="./3.jpg" alt="Memory 3">
 </div>
 
 <div class="memory reveal">
-    <img src="./4.jpg" alt="Memory 4">
+<img src="./4.jpg" alt="Memory 4">
 </div>
 
 <div class="memory reveal">
-    <img src="./5.jpg" alt="Memory 5">
+<img src="./5.jpg" alt="Memory 5">
 </div>
 
 <div class="memory reveal">
-    <img src="./6.jpg" alt="Memory 6">
+<img src="./6.jpg" alt="Memory 6">
 </div>
 
 <div class="memory reveal">
-    <img src="./7.jpg" alt="Memory 7">
+<img src="./7.jpg" alt="Memory 7">
 </div>
 
 <div class="memory reveal">
-    <img src="./8.jpg" alt="Memory 8">
+<img src="./8.jpg" alt="Memory 8">
 </div>
 
 <div class="memory reveal">
-    <img src="./9.jpg" alt="Memory 9">
+<img src="./9.jpg" alt="Memory 9">
 </div>
 
 <div class="memory reveal">
-    <img src="./10.jpg" alt="Memory 10">
+<img src="./10.jpg" alt="Memory 10">
 </div>
 
 </div>
-
-</section>
-
-
 <!-- CONTACT -->
 
 <section id="contact">
@@ -2167,54 +2072,59 @@ class="project-button"
 </div>
 
 <h3>
-    Let's connect ♡
+    Let's stay <em>connected.</em>
 </h3>
 
 <p>
-    Kamu bisa menemukan dan menghubungi
-    saya melalui beberapa platform berikut.
-    Klik icon untuk langsung menuju akun
-    atau mengirim pesan.
+    Terima kasih sudah meluangkan waktu
+    untuk melihat website kecilku.
+    Kalau ingin mengenal atau melihat
+    lebih banyak tentangku, kamu bisa
+    menemukanku di sini ♡
 </p>
+
 
 <div class="social-list">
 
 <a
-class="social"
 href="https://www.instagram.com/bbvterfliee._/"
 target="_blank"
 rel="noopener noreferrer"
+class="social"
 title="Instagram"
 >
     <i class="fa-brands fa-instagram"></i>
 </a>
 
+
 <a
-class="social"
 href="https://www.tiktok.com/@aurelliaaaaaaa._"
 target="_blank"
 rel="noopener noreferrer"
+class="social"
 title="TikTok"
 >
     <i class="fa-brands fa-tiktok"></i>
 </a>
 
+
 <a
-class="social"
-href="https://wa.me/6285709980651"
+href="https://wa.me/"
 target="_blank"
 rel="noopener noreferrer"
+class="social"
 title="WhatsApp"
 >
     <i class="fa-brands fa-whatsapp"></i>
 </a>
 
+
 <a
+href="mailto:"
 class="social"
-href="mailto:dellaaurellia878@gmail.com"
 title="Email"
 >
-    <i class="fa-solid fa-envelope"></i>
+    <i class="fa-regular fa-envelope"></i>
 </a>
 
 </div>
@@ -2239,8 +2149,8 @@ title="Email"
 </h2>
 
 <p class="description">
-    Tujuh kesan kecil tentang perjalanan,
-    usaha, dan karya Aurel.
+    Sedikit kata-kata dari orang-orang
+    yang pernah berbagi cerita denganku.
 </p>
 
 </div>
@@ -2248,35 +2158,22 @@ title="Email"
 
 <div class="testimonials">
 
-<div class="testimonial reveal">
-
-<div class="quote">“</div>
-
-<p>
-    Aurel adalah orang yang mau terus
-    belajar dan nggak gampang menyerah
-    ketika menemukan sesuatu yang sulit.
-</p>
-
-<div class="testimonial-name">
-    — Andini 🌷
-</div>
-
-</div>
-
 
 <div class="testimonial reveal">
 
-<div class="quote">“</div>
+<div class="quote">
+    “
+</div>
 
 <p>
-    Kreatif, punya banyak ide, dan selalu
-    berusaha membuat sesuatu menjadi
-    lebih menarik.
+    Aurel adalah orang yang seru,
+    kreatif, dan selalu punya cara
+    sendiri untuk membuat sesuatu
+    menjadi menarik.
 </p>
 
 <div class="testimonial-name">
-    — Azzahra ✨
+    — Andini
 </div>
 
 </div>
@@ -2284,16 +2181,18 @@ title="Email"
 
 <div class="testimonial reveal">
 
-<div class="quote">“</div>
+<div class="quote">
+    “
+</div>
 
 <p>
-    Salah satu hal yang paling terlihat
-    adalah kemauan Aurel untuk mencoba
-    hal-hal baru.
+    Dia selalu mau mencoba hal baru
+    dan tidak gampang menyerah ketika
+    menemukan sesuatu yang sulit.
 </p>
 
 <div class="testimonial-name">
-    — Almira 🦋
+    — Azzahra
 </div>
 
 </div>
@@ -2301,16 +2200,19 @@ title="Email"
 
 <div class="testimonial reveal">
 
-<div class="quote">“</div>
+<div class="quote">
+    “
+</div>
 
 <p>
-    Aurel punya semangat untuk berkembang
-    dan selalu berusaha memberikan hasil
-    terbaik dari apa yang dikerjakan.
+    Aurel punya banyak ide dan
+    menurutku dia adalah orang yang
+    menyenangkan untuk diajak bekerja
+    sama.
 </p>
 
 <div class="testimonial-name">
-    — Jihan 🎀
+    — Almira
 </div>
 
 </div>
@@ -2318,16 +2220,18 @@ title="Email"
 
 <div class="testimonial reveal">
 
-<div class="quote">“</div>
+<div class="quote">
+    “
+</div>
 
 <p>
-    Dari percobaan pertama membuat website
-    saja sudah terlihat kalau Aurel punya
-    rasa ingin tahu yang besar.
+    Orangnya baik dan cukup aktif.
+    Kalau sudah tertarik dengan sesuatu,
+    dia bisa sangat bersemangat.
 </p>
 
 <div class="testimonial-name">
-    — Keisha 🌸
+    — Jihan
 </div>
 
 </div>
@@ -2335,16 +2239,18 @@ title="Email"
 
 <div class="testimonial reveal">
 
-<div class="quote">“</div>
+<div class="quote">
+    “
+</div>
 
 <p>
-    Tetap pertahankan rasa ingin mencoba
-    dan terus kembangkan kreativitasmu.
-    Kamu masih punya banyak hal untuk dibuat.
+    Aurel itu kreatif dan punya
+    karakter yang cukup kuat dalam
+    membuat sesuatu.
 </p>
 
 <div class="testimonial-name">
-    — Carissa 💗
+    — Keisha
 </div>
 
 </div>
@@ -2352,48 +2258,76 @@ title="Email"
 
 <div class="testimonial reveal">
 
-<div class="quote">“</div>
+<div class="quote">
+    “
+</div>
 
 <p>
-    Aurel selalu punya cara sendiri untuk
-    membuat proses belajar terasa lebih
-    seru dan penuh cerita.
+    Dia selalu berusaha memberikan
+    hasil yang terbaik dari apa yang
+    sedang dia kerjakan.
 </p>
 
 <div class="testimonial-name">
-    — Nanda 🌙
+    — Carissa
 </div>
 
 </div>
+
+
+<div class="testimonial reveal">
+
+<div class="quote">
+    “
+</div>
+
+<p>
+    Aurel adalah seseorang yang
+    menyenangkan dan selalu punya
+    cerita atau ide baru.
+</p>
+
+<div class="testimonial-name">
+    — Nanda
+</div>
+
+</div>
+
 
 </div>
 
 </section>
 
 
-<!-- FINAL MESSAGE -->
+<!-- FINAL -->
 
 <section class="final-section" id="final">
 
 <div class="final-card reveal">
 
 <h2>
-    Pesan untuk pembaca ♡
+    Thank you for <em>visiting.</em> ♡
 </h2>
 
 <p>
-    Terima kasih sudah meluangkan waktu
-    untuk melihat little space milik Aurel.
-    Semoga kamu juga selalu berani mencoba,
-    belajar dari kesalahan, dan menikmati
-    setiap proses kecil dalam perjalananmu.
+    Ini mungkin hanya sebuah website
+    sederhana, tetapi di dalamnya ada
+    sedikit cerita tentang aku,
+    hal-hal yang aku suka, proses yang
+    sedang aku jalani, dan beberapa
+    kenangan yang ingin aku simpan.
+    <br><br>
+    Semoga kamu menikmati perjalanan
+    kecil ini sampai akhir. 🌷
 </p>
+
 
 <button
 class="message-button"
 id="messageButton"
+type="button"
 >
-    💌 Pesan untuk pembaca
+    Click me ♡
 </button>
 
 </div>
@@ -2404,217 +2338,339 @@ id="messageButton"
 <!-- FOOTER -->
 
 <footer>
-    <span>♡</span> (2026) by Aurel <span>♡</span>
+
+Made with
+<span>♡</span>
+by Aurel
+<span>✦</span>
+2026
+
 </footer>
+
+
+<!-- MEMORY POPUP -->
+
+<div
+id="memoryOverlay"
+style="
+display:none;
+position:fixed;
+inset:0;
+z-index:10000;
+background:rgba(74,42,54,.72);
+backdrop-filter:blur(12px);
+align-items:center;
+justify-content:center;
+padding:25px;
+cursor:pointer;
+"
+>
+
+<img
+id="memoryPreview"
+src=""
+alt="Memory preview"
+style="
+max-width:min(90vw,700px);
+max-height:85vh;
+object-fit:contain;
+border:8px solid #fffaf3;
+border-radius:25px;
+box-shadow:0 25px 70px rgba(0,0,0,.25);
+"
+>
+
+</div>
 
 
 <script>
 
-/* SCROLL REVEAL */
+/* =========================
+   REVEAL ON SCROLL
+========================= */
 
 const revealElements =
-document.querySelectorAll(".reveal");
+document.querySelectorAll('.reveal');
 
-const observer =
+const revealObserver =
 new IntersectionObserver(
-    function(entries){
-
-        entries.forEach(function(entry){
-
-            if(entry.isIntersecting){
-
-                entry.target.classList.add("active");
-
-            }
-
-        });
-
-    },
-    {
-        threshold:0.12
-    }
+(entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('active');
+        }
+    });
+},
+{
+    threshold:.12
+}
 );
 
-revealElements.forEach(function(element){
+revealElements.forEach(element=>{
+    revealObserver.observe(element);
+});
 
-    observer.observe(element);
+
+/* =========================
+   EMOJI BURST
+========================= */
+
+const messageButton =
+document.getElementById('messageButton');
+
+messageButton.addEventListener('click',(event)=>{
+
+    const emojis=[
+        '♡',
+        '💗',
+        '🎀',
+        '🌷',
+        '✦',
+        '✨',
+        '💞',
+        '🌸',
+        '🩷',
+        '🎀',
+        '♡',
+        '✧'
+    ];
+
+    const rect =
+    messageButton.getBoundingClientRect();
+
+    const centerX =
+    rect.left + rect.width / 2;
+
+    const centerY =
+    rect.top + rect.height / 2;
+
+
+    for(let i=0;i<24;i++){
+
+        const burst =
+        document.createElement('span');
+
+        burst.className='burst';
+
+        burst.textContent =
+        emojis[
+            Math.floor(
+                Math.random()*emojis.length
+            )
+        ];
+
+
+        const angle =
+        Math.random()*Math.PI*2;
+
+        const distance =
+        90 + Math.random()*180;
+
+        const x =
+        Math.cos(angle)*distance;
+
+        const y =
+        Math.sin(angle)*distance;
+
+        const rotate =
+        (Math.random()*360)-180;
+
+
+        burst.style.left =
+        centerX+'px';
+
+        burst.style.top =
+        centerY+'px';
+
+        burst.style.setProperty(
+            '--x',
+            x+'px'
+        );
+
+        burst.style.setProperty(
+            '--y',
+            y+'px'
+        );
+
+        burst.style.setProperty(
+            '--rotate',
+            rotate+'deg'
+        );
+
+
+        document.body.appendChild(burst);
+
+
+        setTimeout(()=>{
+            burst.remove();
+        },1100);
+
+    }
 
 });
 
 
-/* EMOJI EXPLOSION */
+/* =========================
+   MEMORY PREVIEW
+========================= */
 
-const messageButton =
-document.getElementById("messageButton");
+const memoryOverlay =
+document.getElementById('memoryOverlay');
 
-const emojiList = [
-    "💖",
-    "✨",
-    "🌸",
-    "💕",
-    "🌷",
-    "🎀",
-    "♡",
-    "✿"
-];
+const memoryPreview =
+document.getElementById('memoryPreview');
 
-messageButton.addEventListener(
-    "click",
-    function(){
+const memoryImages =
+document.querySelectorAll('.memory img');
 
-        const rect =
-        messageButton.getBoundingClientRect();
 
-        const centerX =
-        rect.left + rect.width / 2;
+memoryImages.forEach(image=>{
 
-        const centerY =
-        rect.top + rect.height / 2;
+    image.addEventListener('click',(event)=>{
 
-        for(let i = 0; i < 32; i++){
+        event.stopPropagation();
 
-            const emoji =
-            document.createElement("span");
+        memoryPreview.src =
+        image.src;
 
-            emoji.className = "burst";
+        memoryPreview.alt =
+        image.alt;
 
-            emoji.textContent =
-            emojiList[
-                Math.floor(
-                    Math.random() * emojiList.length
-                )
-            ];
+        memoryOverlay.style.display =
+        'flex';
 
-            emoji.style.left =
-            centerX + "px";
+    });
 
-            emoji.style.top =
-            centerY + "px";
+});
 
-            const angle =
-            Math.random() * Math.PI * 2;
 
-            const distance =
-            80 + Math.random() * 230;
+memoryOverlay.addEventListener('click',()=>{
 
-            const x =
-            Math.cos(angle) * distance;
+    memoryOverlay.style.display =
+    'none';
 
-            const y =
-            Math.sin(angle) * distance;
+    memoryPreview.src='';
 
-            emoji.style.setProperty(
-                "--x",
-                x + "px"
-            );
+});
 
-            emoji.style.setProperty(
-                "--y",
-                y + "px"
-            );
 
-            emoji.style.setProperty(
-                "--rotate",
-                (Math.random() * 360 - 180) + "deg"
-            );
+/* =========================
+   NAVBAR ACTIVE FEEL
+========================= */
 
-            document.body.appendChild(emoji);
+const navLinks =
+document.querySelectorAll('.nav-links a');
 
-            setTimeout(
-                function(){
-                    emoji.remove();
-                },
-                1000
-            );
+navLinks.forEach(link=>{
 
+    link.addEventListener('click',()=>{
+
+        navLinks.forEach(item=>{
+            item.style.background='';
+        });
+
+        link.style.background =
+        'rgba(239,190,207,.35)';
+
+    });
+
+});
+
+
+/* =========================
+   EXTRA SPARKLES
+========================= */
+
+document.addEventListener(
+    'click',
+    (event)=>{
+
+        if(
+            event.target.closest(
+                'a,button'
+            )
+        ){
+            return;
         }
+
+
+        const sparkle =
+        document.createElement('span');
+
+        sparkle.textContent='✦';
+
+        sparkle.style.position='fixed';
+        sparkle.style.left=
+        event.clientX+'px';
+        sparkle.style.top=
+        event.clientY+'px';
+
+        sparkle.style.pointerEvents='none';
+        sparkle.style.zIndex='9998';
+
+        sparkle.style.color='#d98fa9';
+        sparkle.style.fontSize='15px';
+
+        sparkle.style.animation=
+        'sparkleFade .8s ease forwards';
+
+
+        document.body.appendChild(
+            sparkle
+        );
+
+
+        setTimeout(()=>{
+            sparkle.remove();
+        },800);
 
     }
 );
 
 
-/* MEMORY IMAGE CLICK */
+const sparkleStyle =
+document.createElement('style');
 
-document
-.querySelectorAll(".memory")
-.forEach(function(memory){
+sparkleStyle.textContent=`
 
-    memory.addEventListener(
-        "click",
-        function(){
+@keyframes sparkleFade{
 
-            const image =
-            memory.querySelector("img");
+    0%{
+        opacity:1;
+        transform:
+            translate(-50%,-50%)
+            scale(.5)
+            rotate(0deg);
+    }
 
-            const overlay =
-            document.createElement("div");
+    100%{
+        opacity:0;
+        transform:
+            translate(-50%,-80px)
+            scale(1.4)
+            rotate(90deg);
+    }
 
-            overlay.style.position =
-            "fixed";
+}
 
-            overlay.style.inset =
-            "0";
+`;
 
-            overlay.style.zIndex =
-            "9997";
+document.head.appendChild(
+    sparkleStyle
+);
 
-            overlay.style.display =
-            "flex";
 
-            overlay.style.alignItems =
-            "center";
+/* =========================
+   IMAGE FALLBACK
+========================= */
 
-            overlay.style.justifyContent =
-            "center";
+document.querySelectorAll('img')
+.forEach(img=>{
 
-            overlay.style.padding =
-            "20px";
-
-            overlay.style.background =
-            "rgba(90,45,65,.82)";
-
-            overlay.style.backdropFilter =
-            "blur(12px)";
-
-            overlay.style.cursor =
-            "pointer";
-
-            const bigImage =
-            document.createElement("img");
-
-            bigImage.src =
-            image.src;
-
-            bigImage.style.maxWidth =
-            "95%";
-
-            bigImage.style.maxHeight =
-            "90vh";
-
-            bigImage.style.objectFit =
-            "contain";
-
-            bigImage.style.borderRadius =
-            "22px";
-
-            bigImage.style.border =
-            "5px solid rgba(255,250,243,.8)";
-
-            overlay.appendChild(
-                bigImage
-            );
-
-            document.body.appendChild(
-                overlay
-            );
-
-            overlay.addEventListener(
-                "click",
-                function(){
-                    overlay.remove();
-                }
-            );
-
+    img.addEventListener(
+        'error',
+        ()=>{
+            img.style.opacity='.25';
         }
     );
 
@@ -2624,5 +2680,4 @@ document
 
 </body>
 </html>
-index-final.html
-HTML
+</section>
